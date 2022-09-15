@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="EventManagerData_01" Class="DataClassesDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=proofmktg.database.windows.net,1433;Initial Catalog=EventManagerData_01;Persist Security Info=True;User ID=Pappy" SettingsObjectName="UpdateWeatherConsole.My.MySettings" SettingsPropertyName="EventManagerData_01ConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.tblWeatherInfo" Member="tblWeatherInfos">
+    <Type Name="tblWeatherInfo">
+      <Column Name="weatherInfoID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="stateName" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="cityName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="weatherDate" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="lowTemp" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="highTemp" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="dayTemp" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="nightTemp" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="condition" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="icon" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="location" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="day" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="dayNumber" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.qryGetUpcomingEventLocation" Member="qryGetUpcomingEventLocations">
+    <Type Name="qryGetUpcomingEventLocation">
+      <Column Name="city" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="state" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="location" Type="System.String" DbType="NVarChar(72)" CanBeNull="true" />
+      <Column Name="zipCode" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Function Name="dbo.DeleteWeather" Method="DeleteWeather">
+    <Return Type="System.Int32" />
+  </Function>
+</Database>

@@ -1,0 +1,76 @@
+
+
+body.modal-open {
+    overflow: visible;
+}
+
+.container {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.example {
+    /*padding-top: 70px;*/
+    margin-bottom: 20px;
+}
+
+.wizard .wizard-body {
+    background-color: #fcfcfc;
+}
+
+.modal {
+    position: relative;
+    display: block;
+    z-index: 1;
+}
+
+    .modal .wizard nav {
+        border-bottom-left-radius: 4px;
+    }
+
+    .modal .wizard .wizard-body {
+        border-bottom-right-radius: 4px;
+    }
+
+
+.panel .wizard nav {
+    border-bottom-left-radius: 4px;
+}
+
+.panel .wizard .wizard-body {
+    border-bottom-right-radius: 4px;
+}
+
+@media (min-width:768px) {
+    #plain {
+        margin: auto;
+        width: 600px;
+    }
+
+    .modal .modal-dialog {
+        width: 602px;
+    }
+
+    .panel {
+        width: 100%;
+        margin: auto;
+    }
+}
+
+
+.form-group {
+    margin-bottom: 8px;
+}
+
+.tight_table {
+    margin-bottom: 0px;
+}
+
+.panel-button {
+    margin-top: -6px;
+}
+
+
+.rcuToolTip {
+    z-index: 2;
+}

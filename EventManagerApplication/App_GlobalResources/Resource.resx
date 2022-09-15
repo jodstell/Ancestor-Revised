@@ -1,0 +1,405 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="ActiveCoursesLabel" xml:space="preserve">
+    <value>Active Courses</value>
+  </data>
+  <data name="AllStudentsButton" xml:space="preserve">
+    <value>All Students</value>
+  </data>
+  <data name="AskAQuestionButton" xml:space="preserve">
+    <value>Ask a Question</value>
+  </data>
+  <data name="AssessmentOption1Label" xml:space="preserve">
+    <value>I don't get it</value>
+  </data>
+  <data name="AssessmentOption2Label" xml:space="preserve">
+    <value>I think i understand</value>
+  </data>
+  <data name="AssessmentOption3Label" xml:space="preserve">
+    <value>I understand this</value>
+  </data>
+  <data name="AssignmentLabel" xml:space="preserve">
+    <value>Assignment</value>
+  </data>
+  <data name="AssignmentNameLabel" xml:space="preserve">
+    <value>Assignment Name</value>
+  </data>
+  <data name="AssignmentsLabel" xml:space="preserve">
+    <value>Assignments</value>
+  </data>
+  <data name="AvailableTestLabel" xml:space="preserve">
+    <value>Available Tests</value>
+  </data>
+  <data name="CancelledLabel" xml:space="preserve">
+    <value>Cancelled</value>
+  </data>
+  <data name="CancelledTestsLabel" xml:space="preserve">
+    <value>Canceled Tests</value>
+  </data>
+  <data name="CertificatesLabel" xml:space="preserve">
+    <value>Certificates</value>
+  </data>
+  <data name="ClassAnnouncements" xml:space="preserve">
+    <value>Class Announcements</value>
+  </data>
+  <data name="ClassDocumentsLabel" xml:space="preserve">
+    <value>Class Documents</value>
+  </data>
+  <data name="ClassLinksLabel" xml:space="preserve">
+    <value>Class Links</value>
+  </data>
+  <data name="CompletedCourseLabel" xml:space="preserve">
+    <value>Completed Courses</value>
+  </data>
+  <data name="CompletedTestLabel" xml:space="preserve">
+    <value>Completed Tests</value>
+  </data>
+  <data name="ContactSupportButton" xml:space="preserve">
+    <value>Contact Support</value>
+  </data>
+  <data name="CourseDatesLabel" xml:space="preserve">
+    <value>Course Dates</value>
+  </data>
+  <data name="CreateANoteLabel" xml:space="preserve">
+    <value>Create a Note</value>
+  </data>
+  <data name="CurentAssignmentsLabel" xml:space="preserve">
+    <value>Current Assignments</value>
+  </data>
+  <data name="CurrentTestsAvailableLabel" xml:space="preserve">
+    <value>Current Tests Available</value>
+  </data>
+  <data name="DateDueLabel" xml:space="preserve">
+    <value>Date Due</value>
+  </data>
+  <data name="DateLabel" xml:space="preserve">
+    <value>Date</value>
+  </data>
+  <data name="DateSubmittedLabel" xml:space="preserve">
+    <value>Date Submitted</value>
+  </data>
+  <data name="DaysAgoLabel" xml:space="preserve">
+    <value>Days ago</value>
+  </data>
+  <data name="DiscussionLabel" xml:space="preserve">
+    <value>Discussion</value>
+  </data>
+  <data name="DiscussionTopicsLabel" xml:space="preserve">
+    <value>Discussion Topics</value>
+  </data>
+  <data name="EndLabel" xml:space="preserve">
+    <value>End</value>
+  </data>
+  <data name="EnrollmentLabel" xml:space="preserve">
+    <value>You are enroled in this course</value>
+  </data>
+  <data name="FailedLabel" xml:space="preserve">
+    <value>Faile</value>
+  </data>
+  <data name="FailedTestsLabel" xml:space="preserve">
+    <value>Failed Tests</value>
+  </data>
+  <data name="FileNameLabel" xml:space="preserve">
+    <value>File Name</value>
+  </data>
+  <data name="FilterByLabel" xml:space="preserve">
+    <value>Filter By</value>
+  </data>
+  <data name="FriendsButton" xml:space="preserve">
+    <value>Friends</value>
+  </data>
+  <data name="GoToClassroomLabel" xml:space="preserve">
+    <value>Go to Classroom</value>
+  </data>
+  <data name="GradedLabel" xml:space="preserve">
+    <value>Graded</value>
+  </data>
+  <data name="GradeLabel" xml:space="preserve">
+    <value>Grade</value>
+  </data>
+  <data name="HomeLabel" xml:space="preserve">
+    <value>Home</value>
+  </data>
+  <data name="IncompletedTestsLabel" xml:space="preserve">
+    <value>Incompleted Tests</value>
+  </data>
+  <data name="InstructorLeadLabel" xml:space="preserve">
+    <value>Instructor Lead</value>
+  </data>
+  <data name="LanguageLabel" xml:space="preserve">
+    <value>Language</value>
+  </data>
+  <data name="LastPostsLabel" xml:space="preserve">
+    <value>Lasts Posts</value>
+  </data>
+  <data name="LogOffLabel" xml:space="preserve">
+    <value>Log off</value>
+  </data>
+  <data name="MarkLabel" xml:space="preserve">
+    <value>Mark as Read + Continue</value>
+  </data>
+  <data name="MessageLabel" xml:space="preserve">
+    <value>Message</value>
+  </data>
+  <data name="MessagesLabel" xml:space="preserve">
+    <value>Messages</value>
+  </data>
+  <data name="MessageToLabel" xml:space="preserve">
+    <value>Message to</value>
+  </data>
+  <data name="MyClassroomLabel" xml:space="preserve">
+    <value>My Classroom</value>
+  </data>
+  <data name="MyConnectionsLabel" xml:space="preserve">
+    <value>My Connections</value>
+  </data>
+  <data name="MyGroupsLabel" xml:space="preserve">
+    <value>My Groups</value>
+  </data>
+  <data name="MyProfileLabel" xml:space="preserve">
+    <value>My Profile</value>
+  </data>
+  <data name="NewsAlertsLabel" xml:space="preserve">
+    <value>News &amp; Alerts</value>
+  </data>
+  <data name="NextPageLabel" xml:space="preserve">
+    <value>Next Page</value>
+  </data>
+  <data name="NoCertificatesLabel" xml:space="preserve">
+    <value>You have not earned any certificates</value>
+  </data>
+  <data name="NoIncompleteTestLabel" xml:space="preserve">
+    <value>There are no incomplete tests</value>
+  </data>
+  <data name="NoTestRetakeLabel" xml:space="preserve">
+    <value>There are no tests available to retake</value>
+  </data>
+  <data name="NoTestsLabel" xml:space="preserve">
+    <value>There are currently no tests available</value>
+  </data>
+  <data name="OpenEnrollmentLabel" xml:space="preserve">
+    <value>Open Enrollment</value>
+  </data>
+  <data name="PassedLabel" xml:space="preserve">
+    <value>Passed</value>
+  </data>
+  <data name="PostDueWarningLabel" xml:space="preserve">
+    <value>Yu have a past due assignment</value>
+  </data>
+  <data name="PreviousPageLabel" xml:space="preserve">
+    <value>Previous Page</value>
+  </data>
+  <data name="ProfileProgressText" xml:space="preserve">
+    <value>How complete is your profile?</value>
+  </data>
+  <data name="QuickStatsLabel" xml:space="preserve">
+    <value>Quick Stats</value>
+  </data>
+  <data name="QuitLabel" xml:space="preserve">
+    <value>Quit + Return to Lesson Plan</value>
+  </data>
+  <data name="ReadingAssignmentLabel" xml:space="preserve">
+    <value>Reaging assignment</value>
+  </data>
+  <data name="ReadLabel" xml:space="preserve">
+    <value>Read</value>
+  </data>
+  <data name="RecentActivityLabel" xml:space="preserve">
+    <value>Recent Activity</value>
+  </data>
+  <data name="RepliesLabel" xml:space="preserve">
+    <value>Replies</value>
+  </data>
+  <data name="ScoreLabel" xml:space="preserve">
+    <value>Score</value>
+  </data>
+  <data name="SelfAssessmentLabel" xml:space="preserve">
+    <value>Self Assessment</value>
+  </data>
+  <data name="SettingsLabel" xml:space="preserve">
+    <value>Settings</value>
+  </data>
+  <data name="SignInInstructionLabel" xml:space="preserve">
+    <value>Sign in using your registered account:</value>
+  </data>
+  <data name="SignInLabel" xml:space="preserve">
+    <value>Sign In</value>
+  </data>
+  <data name="StartedByLabel" xml:space="preserve">
+    <value>Started by</value>
+  </data>
+  <data name="StartLabel" xml:space="preserve">
+    <value>Start</value>
+  </data>
+  <data name="StudentNameLabel" xml:space="preserve">
+    <value>Student Name</value>
+  </data>
+  <data name="SubjectLabel" xml:space="preserve">
+    <value>Subject</value>
+  </data>
+  <data name="SubmitACommentLabel" xml:space="preserve">
+    <value>Submit a Comment</value>
+  </data>
+  <data name="SubmittedLabel" xml:space="preserve">
+    <value>Submitted</value>
+  </data>
+  <data name="TestNameLabel" xml:space="preserve">
+    <value>Test Name</value>
+  </data>
+  <data name="TestsAvailableToRetakeLabel" xml:space="preserve">
+    <value>Tests Available to Retake</value>
+  </data>
+  <data name="TestsNotAvailableToRetakeLabel" xml:space="preserve">
+    <value>Tests Not Available to Retake</value>
+  </data>
+  <data name="TotalPassedLabel" xml:space="preserve">
+    <value>Total Passed</value>
+  </data>
+  <data name="TotalTestsLabel" xml:space="preserve">
+    <value>Total Tests</value>
+  </data>
+  <data name="TotalTestsTakenLabel" xml:space="preserve">
+    <value>Total Tests Taken</value>
+  </data>
+  <data name="UpdateLabel" xml:space="preserve">
+    <value>Update</value>
+  </data>
+  <data name="UploadDocumentButton" xml:space="preserve">
+    <value>Upload Document</value>
+  </data>
+  <data name="ViewButton" xml:space="preserve">
+    <value>View</value>
+  </data>
+  <data name="ViewMyClassroomButton" xml:space="preserve">
+    <value>Go to My Schools</value>
+  </data>
+  <data name="WasDueLabel" xml:space="preserve">
+    <value>Was due</value>
+  </data>
+  <data name="WelcomeText" xml:space="preserve">
+    <value>Welcome to your Learning Dashboard!</value>
+  </data>
+  <data name="WriteEssayLabel" xml:space="preserve">
+    <value>Write an essay</value>
+  </data>
+  <data name="WritingAssignmentLabel" xml:space="preserve">
+    <value>Writing assignment</value>
+  </data>
+</root>

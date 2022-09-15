@@ -1,0 +1,7 @@
+﻿[*.vb]
+
+# BC40004: Member conflicts with member in the base type and should be declared 'Shadows'
+dotnet_diagnostic.BC40004.severity = suggestion
+
+# BC42025: Access of shared member, constant member, enum member or nested type through an instance
+dotnet_diagnostic.BC42025.severity = suggestion

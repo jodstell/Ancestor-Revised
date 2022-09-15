@@ -1,0 +1,33 @@
+﻿<root>
+
+  <tools name="MainToolbar" dockable="true" enabled="true">
+    <tool name="Undo" />
+    <tool name="Redo" />
+    <tool separator="true"/>
+    <tool name="AjaxSpellCheck" />
+  </tools>
+
+  <tools name="Formatting" enabled="true" dockable="true">
+    <tool name="Bold" />
+    <tool name="Italic" />
+    <tool name="Underline" />
+    <tool separator="true"/>
+    <tool name="ForeColor" />
+    <tool separator="true"/>
+    <tool name="RealFontSize"/>
+  </tools>
+
+  <tools name="Paragraph" tab="Home">
+    <tool name="InsertUnorderedList" strip="ListsAndIndention"/>
+    <tool name="InsertOrderedList" strip="ListsAndIndention"/>
+    <tool name="JustifyLeft" strip="Align"/>
+    <tool name="JustifyCenter" strip="Align"/>
+    <tool name="JustifyRight" strip="Align"/>
+  </tools>
+  
+
+  <cssFiles>
+    <item name="~/App_Themes/Default/CustomStyles.css" />
+  </cssFiles>
+
+</root>

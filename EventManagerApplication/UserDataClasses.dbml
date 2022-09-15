@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="EventManagerData" Class="UserDataClassesDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="WebSettings" ConnectionString="Data Source=proofmktg.database.windows.net,1433;Initial Catalog=EventManagerData;Persist Security Info=True;User ID=Pappy" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="DefaultConnection" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.qryViewStaffListing" Member="qryViewStaffListings">
+    <Type Name="qryViewStaffListing">
+      <Column Name="profileID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="userID" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="firstName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="lastName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="lastLoginDate" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="roleName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Clients" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="Markets" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="Suppliers" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+    </Type>
+  </Table>
+</Database>

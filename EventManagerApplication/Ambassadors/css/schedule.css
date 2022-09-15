@@ -1,0 +1,126 @@
+﻿
+        .verticalLine {    
+    padding-left: 25px;
+}
+        .verticalLine2 {
+            border-right: 1px solid #808080;
+        }
+
+        .filter {
+            padding-top: 11px;
+        }
+
+        .bottommargin10 {
+            padding: 13px 16px 13px 13px;
+        }
+
+    .RadMap .k-marker.k-marker-venue:before {
+    color: #fe9a00;
+    font-size:25px;
+}
+.RadMap .k-marker.k-marker-bar-nightclub:before {
+    color: #790091;
+    font-size:25px;
+}
+.RadMap .k-marker.k-marker-retail-off-Premise:before {
+    color: #c9302b;
+    font-size:25px;
+}
+.RadMap .k-marker.k-marker-pin-target:before {
+    color: #005991;
+    font-size:25px;
+}
+
+
+.RadMap .k-marker.k-marker-cancelled:before {
+    color: #52b7e9;
+    font-size:25px;
+}
+
+  /*Fix the pager*/
+        .RadGrid .rgPagerCell .rgNumPart a {
+            padding: 0px 6px !important;
+        }
+
+
+        
+
+        .widget .widget-content {
+            padding-top: 5px;
+        }
+        
+        /*appointments colors*/
+        .rsAptDelete {
+            display: none;
+        }
+
+        .RadScheduler .rsRequested .rsAptContent {
+            background: #005991;
+            border-color: #005991;
+        }
+
+        .RadScheduler .rsScheduled .rsAptContent {
+            background: #fe9a00;
+            border-color: #fe9a00;
+        }
+
+        .RadScheduler .rsBooked .rsAptContent {
+            background: #669934;
+            border-color: #669934;
+        }
+
+        .RadScheduler .rsCancelled .rsAptContent {
+            background: #c9302b;
+            border-color: #c9302b;
+        }
+
+        .RadScheduler .rsToplined .rsAptContent {
+            background: #790091;
+            border-color: #790091;
+        }
+
+        .RadScheduler .rsApproved .rsAptContent {
+            background: #3398cc;
+            border-color: #3398cc;
+        }
+
+        #ctl00_MainContent_RadCalendar1 {
+            width: 350px;
+        }
+        
+        /*CheckBoxs colors*/        
+       .RadButton.approved {
+            background: #3398cc !important;
+            border-color: #3398cc !important;
+            color: white !important;
+        }
+
+       .RadButton.requested {
+            background: #005991 !important;
+            border-color: #005991 !important;
+            color: white !important;
+        }
+
+       .RadButton.scheduled {
+            background: #fe9a00 !important;
+            border-color: #fe9a00 !important;
+            color: white !important;
+        }
+
+       .RadButton.booked {
+            background: #669934 !important;
+            border-color: #669934 !important;
+            color: white !important;
+        }
+
+       .RadButton.toplined {
+            background: #790091 !important;
+            border-color: #790091 !important;
+            color: white !important;
+        }
+
+       .RadButton.cancelled {
+            background: #c9302b !important;
+            border-color: #c9302b !important;
+            color: white !important;
+        }

@@ -1,0 +1,32 @@
+﻿/*table, th, td {
+
+    font-size: 12px;
+}
+
+th {
+    height: 50px;
+    background-color: #808282;
+    color: white;
+}
+
+td .center {
+    text-align: center;
+}
+
+tr .main {
+    background-color: #ebf3e0;
+}*/
+
+.boxes {
+    width: 150px;
+    border: 1px solid black;
+    margin: 5px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.container .boxes {
+    float: left;
+}
+
+

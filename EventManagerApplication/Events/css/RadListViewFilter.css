@@ -1,0 +1,181 @@
+﻿.filterWrapper {
+
+    overflow: hidden;
+
+}
+
+ 
+
+.filterDropDown {
+
+    color: #2a6ca3;
+
+    font-size: 11px;
+
+    width: 170px;
+
+    margin-bottom: 20px;
+
+}
+
+ 
+
+div.radioButtonDiv {
+
+    display: none;
+
+    float: left;
+
+    margin: -6px 10px 0 0;
+
+    color: #2a6ca3;
+
+    font-size: 11px;
+
+}
+
+ 
+
+div.boxValueDiv {
+
+    display: none;
+
+    float: left;
+
+    margin-right: 10px;
+
+    color: #2a6ca3;
+
+    font-size: 11px;
+
+}
+
+ 
+
+div.buttonsDiv {
+
+    display: none;
+
+    float: left;
+
+     margin-right: 10px;
+
+    color: #2a6ca3;
+
+    font-size: 11px;
+
+}
+
+ 
+
+.boxValue {
+
+    vertical-align: middle;
+
+}
+
+ 
+
+.clearFix {
+
+    clear: both;
+
+}
+
+ 
+
+/*.itemStyle {
+
+    float: left;
+
+    color: #2a6ca3;
+
+    width: 230px;
+
+    height: 150px;
+
+    background: no-repeat;
+
+    background-image: url(images/productsBackground5.png);
+
+    margin-left: 23px;
+
+    position: relative;
+
+}*/
+
+ 
+
+.labelLarge {
+
+    position: absolute;
+
+    top: 20px;
+
+    left: 29px;
+
+    font-size: 10pt;
+
+    font-weight: bold;
+
+    width: 140px;
+
+}
+
+ 
+
+.labelSmall {
+
+    position: absolute;
+
+    top: 60px;
+
+    left: 50px;
+
+    font-size: 8pt;
+
+    margin-right: 8px;
+
+}
+
+ 
+
+legend {
+
+    padding: 0.2em 0.5em;
+
+    color: #2a6ca3;
+
+    font-size: 12px;
+
+}
+
+ 
+
+fieldset {
+
+    margin-top: 20px;
+
+    border: solid 1px #e2e4e7 !important;
+
+    height: 100%;
+
+    width: 780px;
+
+}
+
+ 
+
+.rdpWrap + .rdpWrap + .rdpWrap + .rdpWrap + .rdpWrap {
+
+    width: 140px;
+
+}
+
+ 
+
+    .rdpWrap + .rdpWrap + .rdpWrap + .rdpWrap + .rdpWrap + .rdpWrap {
+
+        width: auto;
+
+    }

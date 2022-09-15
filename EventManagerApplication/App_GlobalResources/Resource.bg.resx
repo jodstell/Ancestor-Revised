@@ -1,0 +1,402 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="ActiveCoursesLabel" xml:space="preserve">
+    <value>Активни курсове</value>
+  </data>
+  <data name="AllStudentsButton" xml:space="preserve">
+    <value>Всички студенти</value>
+  </data>
+  <data name="AskAQuestionButton" xml:space="preserve">
+    <value>Задай въпрос</value>
+  </data>
+  <data name="AssesmentOption1Label" xml:space="preserve">
+    <value>Не го разбирам</value>
+  </data>
+  <data name="AssesmentOption2Label" xml:space="preserve">
+    <value>Мисля че го разбирам</value>
+  </data>
+  <data name="AssesmentOption3Label" xml:space="preserve">
+    <value>Разбрах го</value>
+  </data>
+  <data name="AssignmentLabel" xml:space="preserve">
+    <value>Задачи</value>
+  </data>
+  <data name="AssignmentNameLabel" xml:space="preserve">
+    <value>Име на задачата</value>
+  </data>
+  <data name="AssignmentsLabel" xml:space="preserve">
+    <value>Задачи </value>
+  </data>
+  <data name="AvailableTestLabel" xml:space="preserve">
+    <value>Налични тестове</value>
+  </data>
+  <data name="CanceledLabel" xml:space="preserve">
+    <value>Отменени </value>
+  </data>
+  <data name="CanceledTestsLabel" xml:space="preserve">
+    <value>Отменени тестове</value>
+  </data>
+  <data name="CertificatesLabel" xml:space="preserve">
+    <value>Сертификати</value>
+  </data>
+  <data name="ClassAnnouncements" xml:space="preserve">
+    <value>Съобщения за Класа</value>
+  </data>
+  <data name="ClassDocumentsLabel" xml:space="preserve">
+    <value>Файлове на класа</value>
+  </data>
+  <data name="ClassLinksLabel" xml:space="preserve">
+    <value>Връзки на класа</value>
+  </data>
+  <data name="CompletedCourseLabel" xml:space="preserve">
+    <value>Завършени курсове</value>
+  </data>
+  <data name="CompletedTestLabel" xml:space="preserve">
+    <value>Завършени тестове</value>
+  </data>
+  <data name="ContactSupportButton" xml:space="preserve">
+    <value>Свържете се с поддръжката</value>
+  </data>
+  <data name="CourseDatesLabel" xml:space="preserve">
+    <value>Дати за курсовете</value>
+  </data>
+  <data name="CreateANoteLabel" xml:space="preserve">
+    <value>Създай бележка</value>
+  </data>
+  <data name="CurrentAssignmentsLabel" xml:space="preserve">
+    <value>Настоящи задания</value>
+  </data>
+  <data name="CurrentTestsAvailableLabel" xml:space="preserve">
+    <value>Налични тестове в момента</value>
+  </data>
+  <data name="DateDue" xml:space="preserve">
+    <value>Дата на завършване</value>
+  </data>
+  <data name="DateLabel" xml:space="preserve">
+    <value>Дата</value>
+  </data>
+  <data name="DateSubmittedLabel" xml:space="preserve">
+    <value>Дата на предаване</value>
+  </data>
+  <data name="DaysAgoLabel" xml:space="preserve">
+    <value>Дни преди </value>
+  </data>
+  <data name="DiscussionLabel" xml:space="preserve">
+    <value>Дискусия</value>
+  </data>
+  <data name="DiscussionTopicsLabel" xml:space="preserve">
+    <value>Теми за дискусия</value>
+  </data>
+  <data name="EndLabel" xml:space="preserve">
+    <value>Край</value>
+  </data>
+  <data name="EnrollmentLabel" xml:space="preserve">
+    <value>Вие сте записан за този курс</value>
+  </data>
+  <data name="FailedLabel" xml:space="preserve">
+    <value>Невзети</value>
+  </data>
+  <data name="FailedTestsLabel" xml:space="preserve">
+    <value>Скъсани тестове</value>
+  </data>
+  <data name="FileNameLabel" xml:space="preserve">
+    <value>Име на файла</value>
+  </data>
+  <data name="FilterByLabel" xml:space="preserve">
+    <value>Филтър</value>
+  </data>
+  <data name="FriendsButton" xml:space="preserve">
+    <value>Приятели</value>
+  </data>
+  <data name="GradedLabel" xml:space="preserve">
+    <value>Оценено</value>
+  </data>
+  <data name="GradeLabel" xml:space="preserve">
+    <value>Оценка</value>
+  </data>
+  <data name="HomeLabel" xml:space="preserve">
+    <value>Начална страница</value>
+  </data>
+  <data name="IncompletedTestsLabel" xml:space="preserve">
+    <value>Незавършени тестове</value>
+  </data>
+  <data name="InstructorLeadLabel" xml:space="preserve">
+    <value>Водещ инструктор</value>
+  </data>
+  <data name="LanguageLabel" xml:space="preserve">
+    <value>Език</value>
+  </data>
+  <data name="LastPostsLabel" xml:space="preserve">
+    <value>Последни отговори</value>
+  </data>
+  <data name="LogOffLabel" xml:space="preserve">
+    <value>Отписване</value>
+  </data>
+  <data name="MarkLabel" xml:space="preserve">
+    <value>Отбележи като прочетно и продължи</value>
+  </data>
+  <data name="MessageLabel" xml:space="preserve">
+    <value>Съобщение</value>
+  </data>
+  <data name="MessagesLabel" xml:space="preserve">
+    <value>Съобщения</value>
+  </data>
+  <data name="MessageToLabel" xml:space="preserve">
+    <value>До</value>
+  </data>
+  <data name="MyClassroomLabel" xml:space="preserve">
+    <value>Класна стая</value>
+  </data>
+  <data name="MyConnectionsLabel" xml:space="preserve">
+    <value>Моите връзки</value>
+  </data>
+  <data name="MyGroupsLabel" xml:space="preserve">
+    <value>Моите групи</value>
+  </data>
+  <data name="MyProfileLabel" xml:space="preserve">
+    <value>Моят профил</value>
+  </data>
+  <data name="NewsAlertsLabel" xml:space="preserve">
+    <value>Новини и известия</value>
+  </data>
+  <data name="NextPageLabel" xml:space="preserve">
+    <value>Следваща страница</value>
+  </data>
+  <data name="NoCertificatesLabel" xml:space="preserve">
+    <value>Все още не сте придобили сертификати</value>
+  </data>
+  <data name="NoIncompleteTestLabel" xml:space="preserve">
+    <value>Няма незавършени тестове</value>
+  </data>
+  <data name="NoTestRetakeLabel" xml:space="preserve">
+    <value>Няма налични тестове които можете да преминете отново</value>
+  </data>
+  <data name="NoTestsLabel" xml:space="preserve">
+    <value>За момента няма налични тестове</value>
+  </data>
+  <data name="OpenEnrollmentLabel" xml:space="preserve">
+    <value>Отвори записите</value>
+  </data>
+  <data name="PassedLabel" xml:space="preserve">
+    <value>Взети </value>
+  </data>
+  <data name="PastDueLabel" xml:space="preserve">
+    <value>Имате задача с изтекъл срок</value>
+  </data>
+  <data name="PreviousPageLabel" xml:space="preserve">
+    <value>Предишна страница</value>
+  </data>
+  <data name="ProfileProgressText" xml:space="preserve">
+    <value>Колко актуализиран е вашия профил?</value>
+  </data>
+  <data name="QuickStatsLabel" xml:space="preserve">
+    <value>Кратка статистика</value>
+  </data>
+  <data name="QuitLabel" xml:space="preserve">
+    <value>Изход и връщане към Учебния План</value>
+  </data>
+  <data name="ReadingAssignmentLabel" xml:space="preserve">
+    <value>Задача за четене</value>
+  </data>
+  <data name="ReadLabel" xml:space="preserve">
+    <value>Прочетете</value>
+  </data>
+  <data name="RecentActivityLabel" xml:space="preserve">
+    <value>Последни дейности</value>
+  </data>
+  <data name="RepliesLabel" xml:space="preserve">
+    <value>Отговори</value>
+  </data>
+  <data name="ScoreLabel" xml:space="preserve">
+    <value>Точки</value>
+  </data>
+  <data name="SelfAssessmentLabel" xml:space="preserve">
+    <value>Самооценка</value>
+  </data>
+  <data name="SettingsLabel" xml:space="preserve">
+    <value>Настройки</value>
+  </data>
+  <data name="SignInInstructionLabel" xml:space="preserve">
+    <value />
+  </data>
+  <data name="SignInLabel" xml:space="preserve">
+    <value>Влизане</value>
+  </data>
+  <data name="StartedByLabel" xml:space="preserve">
+    <value>Започнато от</value>
+  </data>
+  <data name="StartLabel" xml:space="preserve">
+    <value>Начало </value>
+  </data>
+  <data name="StudentNameLabel" xml:space="preserve">
+    <value>Име на студента</value>
+  </data>
+  <data name="SubjectLabel" xml:space="preserve">
+    <value>Тема</value>
+  </data>
+  <data name="SubmitACommentLabel" xml:space="preserve">
+    <value>Напиши коментар</value>
+  </data>
+  <data name="SubmittedLabel" xml:space="preserve">
+    <value>Предадено</value>
+  </data>
+  <data name="TestNameLabel" xml:space="preserve">
+    <value>Име на теста</value>
+  </data>
+  <data name="TestsAvailableToRetakeLabel" xml:space="preserve">
+    <value>Тестовe които са възможни да се минат отново</value>
+  </data>
+  <data name="TestsNotAvailableToRetakeLabel" xml:space="preserve">
+    <value>Тестове които не са възможни да се минат отново</value>
+  </data>
+  <data name="TotalTestsLabel" xml:space="preserve">
+    <value>Всички тестове</value>
+  </data>
+  <data name="TotalTestsPassedLabel" xml:space="preserve">
+    <value>Всички взети тестове</value>
+  </data>
+  <data name="TotalTestsTakenLabel" xml:space="preserve">
+    <value>Всички изминати тестове</value>
+  </data>
+  <data name="UpdateLabel" xml:space="preserve">
+    <value>Актуализация</value>
+  </data>
+  <data name="UploadDocumentButton" xml:space="preserve">
+    <value>Качи файл</value>
+  </data>
+  <data name="ViewButton" xml:space="preserve">
+    <value>Преглед</value>
+  </data>
+  <data name="ViewMyClassroomLabel" xml:space="preserve">
+    <value>Към Класната стая</value>
+  </data>
+  <data name="WasDueLabel" xml:space="preserve">
+    <value />
+  </data>
+  <data name="WelcomeText" xml:space="preserve">
+    <value>Добре дошли в таблото за обучение</value>
+  </data>
+  <data name="WriteEssayLabel" xml:space="preserve">
+    <value>Напишете есе</value>
+  </data>
+  <data name="WritingAssignmentLabel" xml:space="preserve">
+    <value>Задача за писане</value>
+  </data>
+</root>

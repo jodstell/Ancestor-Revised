@@ -1,0 +1,55 @@
+﻿Administrative Interface
+• Move software domain to gigengyn.io from gigengyn.com
+• Create a link from gigengyn.com website to software domain gigengyn.io one for clients and
+one for BA's
+• Development of administrative login and view of the system to view all clients data in global
+view instead of having to pick clients one by one to view. This will allow admins to run reports
+from a company view instead of by each client.
+• Development of admins to create and manage clients in the software
+• Develop client unique codes that are used while recruiting BA's. BA's apply for events using
+client codes this will assign BA to the proper agency. However, BA's also need to be able to be
+assigned to multiple agencies as they are provided other codes.
+• Development of ability for BA to create their own login upon applying.
+• Development of ability of admins to add new categories i.e. cannabis
+• Development of ability of admins to create new sku's i.e. flowers, rolls, edibles etc
+
+
+BA Onboarding
+• Once BA creates login 
+• Overview 
+• After Date of Birth add Social Security 
+• Gender - Need non-binary and other added to list 
+• Move US citizen to Licenses and Documents 
+• Appearance Piercings Visible facial - yes / no Earspools - yes /no 
+Tattoos Visible yes/no Availability 
+• Change LGBT to LGBTQ+
+• Licenses and Documents (added documents) 
+• Fillable W-9 with electronic signature (pre-fill forms from previous data entered in
+the overview) 
+• Fillable I-9 with electronic signature (pre-fill forms from previous data entered in
+the overview) 
+• Government issued Id required (drivers license, passport, military id etc) 
+• Replace sampling license with marijuana work card or alcohol handler card 
+Need to build in a way to track expiration dates and alert BA 30 days prior to
+expiration. If licenses expire the BA is moved to pending and not eligible to work
+until new license is uploaded.
+• Independent Contractor Agreement (customizable by client) 
+• Company credit card agreement (customizable by client) 
+• Direct Deposit or payment authorization form
+• Once BA finishes the onboarding then a task is created and assigned to event
+managers to approve or deny
+• Once event manager approves then a task is created and assigned to back office
+to verify paperwork and order credit cards etc
+• Development of Progressive Web Application with the ability of photos to be taken and
+saved to the gallery
+• Checkins added to events
+• Development of 48 hour checkin added and reminder sent to BA
+• Development of 4 hour checkin added and reminder sent to BA (alert sent to
+admins if checkin is not completed)
+• Development of Selfie checkin at location 15 minutes prior to event (alert sent to
+admins if checkin is not completed)
+• Development geofencing or google for gps and time stamp verification to confirm
+BA is at location.
+• Development of Selfie checkout at location up to 15 minutes after event. gps and
+time stamped.
+• Development of API capabilities for an instant pay option.

@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="DataClasses">
+  <DataContextMoniker Name="/DataClassesDataContext" />
+  <nestedChildShapes>
+    <classShape Id="c1a780c7-6774-4879-acd6-809da06c8184" absoluteBounds="5, 2.125, 2, 3.3093082682291666">
+      <DataClassMoniker Name="/DataClassesDataContext/tblWeatherInfo" />
+      <nestedChildShapes>
+        <elementListCompartment Id="e4a59198-1572-44be-a8c8-f497c784b83f" absoluteBounds="5.015, 2.585, 1.9700000000000002, 2.7493082682291665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="6ed38d6d-79c4-49f5-891e-47842e518587" absoluteBounds="8.125, 2.25, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/DataClassesDataContext/qryGetUpcomingEventLocation" />
+      <nestedChildShapes>
+        <elementListCompartment Id="74683d00-21ee-41a3-9360-1d8a72bcaa9f" absoluteBounds="8.14, 2.71, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

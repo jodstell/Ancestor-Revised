@@ -1,0 +1,206 @@
+﻿<%@ Master Language="VB" AutoEventWireup="false" CodeBehind="Master.master.vb" Inherits="EventManagerApplication.Master" %>
+
+
+<%@ Import Namespace="EventManagerApplication" %>
+<%@ Import Namespace="Microsoft.AspNet.Identity" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <meta charset="utf-8" />
+    <title></title>
+
+    <meta name="robots" content="noindex" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+
+
+    <!-- Latest compiled and minified CSS -->
+    <%--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" />
+
+    <link href="/theme/css/bootstrap-responsive.min.css" rel="stylesheet" />
+
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" />
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans:400italic,600italic,400,600" rel="stylesheet" />--%>
+
+    <%--<link href="/theme/css/ui-lightness/jquery-ui-1.10.0.custom.min.css" rel="stylesheet" />
+    <link href="/theme/css/base-admin-3.css" rel="stylesheet" />
+    <link href="/theme/css/base-admin-3-responsive.css" rel="stylesheet" />
+
+    <link href="/theme/css/pages/dashboard.css" rel="stylesheet" />
+    <link href="/theme/css/custom2.css" rel="stylesheet" />--%>
+
+
+    <!-- CSS Styles Form Dashboard.Master -->
+    <link href="/theme/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="/theme/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet" />
+
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans:400italic,600italic,400,600" rel="stylesheet" />
+
+    <link href="/theme/css/ui-lightness/jquery-ui-1.10.0.custom.min.css" rel="stylesheet" />
+
+    <link href="/theme/css/base-admin-3.css" rel="stylesheet" />
+    <link href="/theme/css/base-admin-3-responsive.css" rel="stylesheet" />
+    <link href="/theme/css/pages/dashboard.css" rel="stylesheet" />
+    <link href="Theme/css/custom2.css" rel="stylesheet" />
+    <link href="Theme/css/custom1.css" rel="stylesheet" />
+
+
+
+    <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+     <asp:PlaceHolder runat="server">
+        <%: Scripts.Render("~/bundles/modernizr") %>
+    </asp:PlaceHolder>
+
+  <%-- <webopt:bundlereference runat="server" path="~/Content/css" />--%>
+
+
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+     <form id="form1" runat="server">
+        <asp:ScriptManager runat="server">
+            <Scripts>
+                <%--To learn more about bundling scripts in ScriptManager see http://go.microsoft.com/fwlink/?LinkID=301884 --%>
+                <%--Framework Scripts--%>
+                <asp:ScriptReference Name="MsAjaxBundle" />
+                <asp:ScriptReference Name="jquery" />
+                <asp:ScriptReference Name="bootstrap" />
+                <asp:ScriptReference Name="respond" />
+                <asp:ScriptReference Name="WebForms.js" Assembly="System.Web" Path="~/Scripts/WebForms/WebForms.js" />
+                <asp:ScriptReference Name="WebUIValidation.js" Assembly="System.Web" Path="~/Scripts/WebForms/WebUIValidation.js" />
+                <asp:ScriptReference Name="MenuStandards.js" Assembly="System.Web" Path="~/Scripts/WebForms/MenuStandards.js" />
+                <asp:ScriptReference Name="GridView.js" Assembly="System.Web" Path="~/Scripts/WebForms/GridView.js" />
+                <asp:ScriptReference Name="DetailsView.js" Assembly="System.Web" Path="~/Scripts/WebForms/DetailsView.js" />
+                <asp:ScriptReference Name="TreeView.js" Assembly="System.Web" Path="~/Scripts/WebForms/TreeView.js" />
+                <asp:ScriptReference Name="WebParts.js" Assembly="System.Web" Path="~/Scripts/WebForms/WebParts.js" />
+                <asp:ScriptReference Name="Focus.js" Assembly="System.Web" Path="~/Scripts/WebForms/Focus.js" />
+                <asp:ScriptReference Name="WebFormsBundle" />
+                <%--Site Scripts--%>
+            </Scripts>
+        </asp:ScriptManager>
+
+        <style>
+            .navbar-text {
+                margin-bottom: 0;
+            }
+
+            .navbar-inverse .navbar-text {
+                margin-left: -45px;
+                color: #FFF;
+                margin-top: 30px;
+            }
+
+            .navbar > .container .navbar-brand, .navbar > .container-fluid .navbar-brand {
+                margin-left: -30px;
+            }
+
+            @media only screen and (max-width: 850px) {
+                    .navbar > .container .navbar-brand, .navbar > .container-fluid .navbar-brand {
+                        margin-left: -10px;
+                    }
+            }
+
+            @media only screen and (min-width: 770px) and (max-width: 880px) {
+                    .navbar > .container .navbar-brand, .navbar > .container-fluid .navbar-brand {
+                        margin-left: -30px;
+                    }
+            }
+
+            /*.navbar.navbar-inverse {
+    background: none repeat scroll 0% 0% #343a50;
+    border-color: #292929 #292929 #4f4f4f;
+    border-bottom: 1px solid #4f4f4f;*/
+
+            .navbar.navbar-inverse {
+    background: none repeat scroll 0% 0% #1f2938;
+    border-color: #292929 #292929 #4f4f4f;
+    border-bottom: 1px solid #4f4f4f;
+}
+
+
+
+        </style>
+
+
+        <nav class="navbar navbar-inverse" role="navigation">
+
+	<div class="container">
+  <!-- Brand and toggle get grouped for better mobile display -->
+  <div class="navbar-header" style="padding-right: 3px; padding-left: 17px;">
+    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+      <span class="sr-only">Toggle navigation</span>
+      <i class="icon-cog"></i>
+    </button>
+    <a class="navbar-brand" href="#">
+        <asp:Image ID="ClientLogo" runat="server" />
+    </a> 
+      <p class="navbar-text"></p>
+  </div>
+
+
+
+        <asp:Panel ID="TopRightNavPanel" runat="server">
+<%--  <div class="collapse navbar-collapse navbar-ex1-collapse">
+    <ul class="nav navbar-nav navbar-right">
+
+    </ul>
+
+
+  </div><!-- /.navbar-collapse -->--%>
+            </asp:Panel>
+
+
+
+</div> <!-- /.container -->
+</nav>
+
+        <div class="main">
+
+        <asp:ContentPlaceHolder ID="MainContent" runat="server">
+
+        </asp:ContentPlaceHolder>
+
+
+            </div>
+
+
+
+
+
+        <div class="footer">
+
+	<div class="container">
+
+		<div class="row">
+
+			<div id="footer-copyright" class="col-md-6">
+				<%--&copy; 2022 GigEngyn--%>
+			</div> <!-- /span6 -->
+
+			<div id="footer-terms" class="col-md-6">
+
+			</div> <!-- /.span6 -->
+
+		</div> <!-- /row -->
+
+	</div> <!-- /container -->
+
+</div> <!-- /footer -->
+
+        <!-- Le javascript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+
+
+    </form>
+</body>
+</html>
+

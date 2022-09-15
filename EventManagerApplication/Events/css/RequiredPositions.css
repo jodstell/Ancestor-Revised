@@ -1,0 +1,248 @@
+﻿
+
+#mainContentArea {
+    background-color: White;
+    margin: 100px auto;
+    -moz-border-radius: 10px;
+    padding: 30px;
+}
+
+#trackContainer {
+    border: none;
+    border-top: 1px solid #E6E6E6;
+    border-left: 1px solid #E6E6E6;
+    float: left;
+}
+
+div.RadListView {
+    float: left;
+    border: none;
+    background-color: Transparent;
+}
+
+div.RadListView_Black,
+div.RadListView_Glow,
+div.RadListView_BlackMetroTouch,
+.qsfDark .result {
+    color: #00156E;
+}
+
+#genreContainer {
+    float: right;
+    width: 200px;
+    border: 1px solid #E6E6E6;
+    border-bottom: none;
+}
+
+   #genreContainer a,
+    .result .genre {
+        display: block;
+        padding: 18px 5px 17px 55px;
+        font-size: 14px;
+        text-decoration: none;
+        border-bottom: 1px solid #E6E6E6;
+    }
+
+* > #genreContainer a,
+* > .result .genre {
+    background: #ECF4FF ;
+}
+
+* html #genreContainer a,
+* html .result .genre {
+    background: #ECF4FF;
+}
+
+    #genreContainer a:hover,
+    #genreContainer a.selected {
+        background-color: #FFCB60;
+        color: #00156E;
+    }
+
+    #GenreLink a:hover,
+    #GenreLink a.selected {
+        background-color: #FFCB60;
+        color: #00156E;
+    }
+
+    #genreContainer a.Unsorted,
+    .result .Unsorted {
+        background-position: 10px -94px;
+    }
+
+    #genreContainer a.Rock,
+    .result .Rock {
+        background-position: 10px -194px;
+    }
+
+    #genreContainer a.Pop,
+    .result .Pop {
+        background-position: 10px -294px;
+    }
+
+    #genreContainer a.Classical,
+    .result .Classical {
+        background-position: 10px -394px;
+    }
+
+    #genreContainer a.Jazz,
+    .result .Jazz {
+        background-position: 10px -494px;
+    }
+
+    #genreContainer a.Hip-Hop,
+    .result .Hip-Hop {
+        background-position: 10px -594px;
+    }
+
+
+.result .info {
+    display: none;
+}
+
+.result {
+    margin-top: 1.6em;
+    float: right;
+    width: 370px;
+    font-size: 12px;
+}
+
+    .result .msg {
+        border: 1px solid #E6E6E6;
+        background-color: #ECF4FF;
+        padding: 20px;
+    }
+
+        .result .msg strong {
+            color: Red;
+        }
+
+    .result div.track {
+        
+        padding: 13px 5px 7px;
+        overflow: hidden;
+        text-align: left;
+        border: none;
+    }
+
+* > .result div.track {
+    background: transparent url('/images/sprite.png') no-repeat scroll 0 -750px;
+}
+
+* html .result div.track {
+    background: transparent url('/images/sprite.gif') no-repeat scroll 0 -750px;
+}
+
+
+.result .arrow {
+    width: 28px;
+    height: 20px;
+    margin-left: 170px;
+    margin-top: 15px;
+}
+
+* > .result .arrow {
+    background: transparent url('/images/sprite.png') no-repeat scroll 0 -850px;
+}
+
+* html .result .arrow {
+    background: transparent url('/images/sprite.gif') no-repeat scroll 0 -850px;
+}
+
+.result .genre {
+    width: 100px;
+    font-size: 14px;
+    border: 1px solid #E6E6E6;
+    float: right;
+}
+
+.track,
+div.RadListView div.track {
+
+    float: left;
+    border-right: 1px solid #E6E6E6;
+    border-bottom: 1px solid #E6E6E6;
+    padding: 0;
+    margin: 0;
+}
+
+.noTracks {
+    border-right: 1px solid #E6E6E6;
+    border-bottom: 1px solid #E6E6E6;
+    padding: 10px;
+}
+
+div.RadListView div.track h3,
+div.RadListView div.track div {
+    text-align: center;
+    line-height: 1.5em;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+div.RadListView div.track h3 {
+    font-size: 12px;
+}
+
+div.RadListView div.track .info {
+    padding-top: 60px;
+}
+
+div.RadListView div.track .rlvDrag {
+    margin: 5px;
+    float: left;
+}
+
+div.RadListView div.rlvDraggedItem {
+    border: 0;
+    margin: 0;
+}
+
+div.rlvDraggedItem div.track.rlvI {
+    border: none;
+    width: 400px;
+    height: 50px;
+}
+
+* > div.rlvDraggedItem div.track.rlvI {
+    background: transparent url('/images/sprite.png') no-repeat scroll 0 0;
+}
+
+* html div.rlvDraggedItem div.track.rlvI {
+    background: transparent url('/images/sprite.gif') no-repeat scroll 0 0;
+}
+
+    div.rlvDraggedItem div.track.rlvI .info {
+        padding-top: 10px;
+        padding-left: 10px;
+    }
+
+        div.rlvDraggedItem div.track.rlvI .info div,
+        div.rlvDraggedItem div.track.rlvI .info h3 {
+            font-size: 11px;
+            line-height: normal;
+        }
+
+
+
+    div.rlvDraggedItem div.track.rlvI .rlvDrag {
+        display: none;
+    }
+
+    div.rlvDraggedItem div.track.rlvI .info .album {
+        display: none;
+    }
+
+    div.rlvDraggedItem div.track.rlvI .info h3,
+    div.rlvDraggedItem div.track.rlvI .info div {
+        margin: 0 0 0 40px;
+        width: 130px;
+        height: 16px;
+        display: block;
+        text-align: left;
+        overflow: hidden;
+    }
+
+.clearFix {
+    clear: both;
+}

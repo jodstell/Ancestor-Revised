@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="UserDataClasses">
+  <DataContextMoniker Name="/UserDataClassesDataContext" />
+  <nestedChildShapes>
+    <classShape Id="bbf51a85-00a1-4970-b7ca-d1064be6e057" absoluteBounds="5.625, 2.75, 2, 2.5401025390625">
+      <DataClassMoniker Name="/UserDataClassesDataContext/qryViewStaffListing" />
+      <nestedChildShapes>
+        <elementListCompartment Id="873b5105-d166-4561-9b07-934a2dee0e1f" absoluteBounds="5.64, 3.21, 1.9700000000000002, 1.9801025390625" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

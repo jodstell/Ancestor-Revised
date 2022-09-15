@@ -1,0 +1,100 @@
+﻿ @media (min-width: 420px) and (max-width: 1280px) {
+            .hidesmall {
+                display: inline;
+            }
+
+            .showsmall {
+                display: none;
+            }
+        }
+        
+
+        @media (min-width: 320px) and (max-width: 400px) {
+            .hidesmall {
+                display: none;
+            }
+
+            .showsmall {
+                display: inline;
+            }
+        }
+        
+        
+        .main {
+            padding: 10px;
+        }
+        
+        div.RadUpload .ruBrowse {
+            background-position: 0 -23px;
+            width: 110px;
+        }
+
+        div.RadUpload_Default .ruFileWrap .ruButtonHover {
+            background-position: 100% -23px !important;
+        }
+
+        .label-standard {
+            background-color: #000;
+        }
+
+        .form-group {
+            margin-bottom: 10px;
+        }
+
+
+        .rlvI1 {
+            font-size: 14px;
+            border-bottom: 0 solid;
+            padding-top: 5px;
+            padding-bottom: 3px;
+        }
+
+        .rlvIEdit1 {
+            width: 400px;
+            margin: 15px;
+        }
+
+        .RadListView_Metro {
+            margin: 5px;
+        }
+
+        .RadListView div.rlvI, .RadListView div.rlvA, .RadListView div.rlvISel, .RadListView div.rlvIEmpty, .RadListView div.rlvIEdit1 {
+            border-bottom: 0 solid;
+        }
+
+        div.RadListBox .rlbTransferTo,
+        div.RadListBox .rlbTransferToDisabled,
+        div.RadListBox .rlbTransferAllToDisabled,
+        div.RadListBox .rlbTransferAllTo {
+            display: none;
+        }
+
+        .title {
+            font-size: 14px;
+            padding-bottom: 0;
+        }
+
+        .list-containers .list-container {
+            text-align: left;
+            display: inline-block;
+            vertical-align: top;
+        }
+
+        .background-silk .demo-container {
+            background-color: #F3F3F3;
+        }
+
+        .list-container.size-thin {
+            max-width: 380px;
+        }
+
+        .list-container {
+            margin: 0 auto;
+            padding: 10px;
+            border: 1px solid #E2E4E7;
+            background-color: #F5F7F8;
+        }
+
+#ctl00_MainContent_ContactFormView_EditMaskedTextBox {
+    height: 32px;
+}

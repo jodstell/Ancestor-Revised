@@ -1,0 +1,1049 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="BletsianLMS_GigEngyn" Class="LMSDataClassesDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="WebSettings" ConnectionString="Data Source=LAPTOP-Q7HOVIES;Initial Catalog=EventManagerData_001;Integrated Security=True" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="LMSConnection" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.Site" Member="Sites">
+    <Type Name="Site">
+      <Column Name="ID" Type="System.String" DbType="NVarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="SiteID" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="HostName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="CompanyName" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="SiteDescription" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="SiteName" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="SiteManager" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Location" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="SiteHeader" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="PassingGrade" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="RetakeTestHrs" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ShowAgreementPage" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="AgreementText" Type="System.String" DbType="Text" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="EmailAddressRequired" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="ValidateRegistration" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="ContactEmailAddress" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Timeout" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="RequiredTestEnabled" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="RequiredTestID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="RequiredTestText" Type="System.String" DbType="Text" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="EnableTestStats" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="Host" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="LocatedEnabled" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="CompanyLogo" Type="System.Data.Linq.Binary" DbType="Image" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="Subscription" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="DefaultTimeZone" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="CultureInfoCode" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="SiteLogo" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="ShowCopyright" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="ShowAssignments" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="FavIconURL" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="WelcomeText" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="DashboardURL" Type="System.String" DbType="NVarChar(256)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.StudentDetails" Member="StudentDetails">
+    <Type Name="StudentDetail">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="UserID" Type="System.String" DbType="NVarChar(128) NOT NULL" CanBeNull="false" />
+      <Column Name="UserName" Type="System.String" DbType="NVarChar(256) NOT NULL" CanBeNull="false" />
+      <Column Name="Email" Type="System.String" DbType="NVarChar(256)" CanBeNull="true" />
+      <Column Name="FirstName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="LastName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="PhotoUrl" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="TimeZone" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Phone1" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="SiteID" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Address" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="City" Type="System.String" DbType="NVarChar(128)" CanBeNull="true" />
+      <Column Name="State" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="RegistrationDate" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="LastLoginDate" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="PostCode" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Status" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.UserDetails" Member="UserDetails">
+    <Type Name="UserDetail">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="UserID" Type="System.String" DbType="NVarChar(128) NOT NULL" CanBeNull="false" />
+      <Column Name="UserName" Type="System.String" DbType="NVarChar(256) NOT NULL" CanBeNull="false" />
+      <Column Name="Email" Type="System.String" DbType="NVarChar(256)" CanBeNull="true" />
+      <Column Name="FirstName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="LastName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="PhotoUrl" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="TimeZone" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Phone1" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="SiteID" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Address" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="City" Type="System.String" DbType="NVarChar(128)" CanBeNull="true" />
+      <Column Name="State" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="RegistrationDate" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="LastLoginDate" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="PostCode" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Status" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.AspNetRoles" Member="AspNetRoles">
+    <Type Name="AspNetRole">
+      <Column Name="Id" Type="System.String" DbType="NVarChar(128) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(256) NOT NULL" CanBeNull="false" />
+      <Association Name="AspNetRole_AspNetUserRole" Member="AspNetUserRoles" ThisKey="Id" OtherKey="RoleId" Type="AspNetUserRole" />
+    </Type>
+  </Table>
+  <Table Name="dbo.AspNetUserLogins" Member="AspNetUserLogins">
+    <Type Name="AspNetUserLogin">
+      <Column Name="LoginProvider" Type="System.String" DbType="NVarChar(128) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="ProviderKey" Type="System.String" DbType="NVarChar(128) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="UserId" Type="System.String" DbType="NVarChar(128) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Association Name="AspNetUser_AspNetUserLogin" Member="AspNetUser" ThisKey="UserId" OtherKey="Id" Type="AspNetUser" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.AspNetUserRoles" Member="AspNetUserRoles">
+    <Type Name="AspNetUserRole">
+      <Column Name="UserId" Type="System.String" DbType="NVarChar(128) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="RoleId" Type="System.String" DbType="NVarChar(128) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Association Name="AspNetRole_AspNetUserRole" Member="AspNetRole" ThisKey="RoleId" OtherKey="Id" Type="AspNetRole" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+      <Association Name="AspNetUser_AspNetUserRole" Member="AspNetUser" ThisKey="UserId" OtherKey="Id" Type="AspNetUser" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.AspNetUsers" Member="AspNetUsers">
+    <Type Name="AspNetUser">
+      <Column Name="Id" Type="System.String" DbType="NVarChar(128) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Email" Type="System.String" DbType="NVarChar(256)" CanBeNull="true" />
+      <Column Name="EmailConfirmed" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="PasswordHash" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="SecurityStamp" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="PhoneNumber" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="PhoneNumberConfirmed" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="TwoFactorEnabled" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="LockoutEndDateUtc" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="LockoutEnabled" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="AccessFailedCount" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="UserName" Type="System.String" DbType="NVarChar(256) NOT NULL" CanBeNull="false" />
+      <Association Name="AspNetUser_AspNetUserLogin" Member="AspNetUserLogins" ThisKey="Id" OtherKey="UserId" Type="AspNetUserLogin" />
+      <Association Name="AspNetUser_AspNetUserRole" Member="AspNetUserRoles" ThisKey="Id" OtherKey="UserId" Type="AspNetUserRole" />
+    </Type>
+  </Table>
+  <Table Name="dbo.AspNetUsersProfile" Member="AspNetUsersProfiles">
+    <Type Name="AspNetUsersProfile">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="UserID" Type="System.String" DbType="NVarChar(128) NOT NULL" CanBeNull="false" />
+      <Column Name="SiteID" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="FirstName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="NickName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="LastName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Phone1" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Phone2" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Address" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Address2" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="City" Type="System.String" DbType="NVarChar(128)" CanBeNull="true" />
+      <Column Name="State" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="PostCode" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="TimeZone" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="PhotoUrl" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="DOB" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="RegistrationDate" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="LastLoginDate" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="IsOnline" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="Status" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="InvitationCode" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Aboutme" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="ChangePasswordRequired" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Course" Member="Courses">
+    <Type Name="Course">
+      <Column Name="CourseID" Type="System.String" DbType="NVarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="CourseTitle" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="CourseCode" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="SiteID" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="PrerequisiteID" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="GroupID" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="InstructorID" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="TestID" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Description" Type="System.String" DbType="Text" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="Enabled" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="Enrollment" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CourseType" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Syllabus" Type="System.String" DbType="Text" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="CreditsEarned" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="StartDate" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="EndDate" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="EnableAssignments" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="ShowCourseSubHeading" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="EnableSideBarAnnouncements" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="EnableSideBarSupport" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="IconURL" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Curriculum" Member="Curriculums">
+    <Type Name="Curriculum">
+      <Column Name="CurriculumID" Type="System.String" DbType="NVarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="CurriculumTitle" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="CurriculumGroupID" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="CourseID" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Text" Type="System.String" DbType="Text" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="SortOrder" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="DesiredOrder" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Enabled" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="ComplexityLevel" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Required" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="Points" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.CurriculumList" Member="CurriculumLists">
+    <Type Name="CurriculumList">
+      <Column Name="CurriculumListID" Type="System.String" DbType="NVarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="CurriculumID" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Title" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Text" Type="System.String" DbType="Text" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="[Order]" Member="Order" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ContentType" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="VideoURL" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="EmbedCode" Type="System.String" DbType="Text" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="Answer1" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Answer2" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Answer3" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Answer4" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="CorrectAnswer" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="AnswerExplanation" Type="System.String" DbType="Text" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="QuestionType" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="AnswerText" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="CorrectAnswerText" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="AssignmentID" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="UserContentID" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="TestID" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Applicants" Member="Applicants">
+    <Type Name="Applicant">
+      <Column Name="ApplicantID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="dbGUID" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="SSN" Type="System.String" DbType="NVarChar(4)" CanBeNull="true" />
+      <Column Name="FirstName" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="LastName" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Address" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="City" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="State" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Zip" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Phone" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="CellPhone" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="DOB" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="SiteID" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="db1" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="db1Label" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="db2" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="db2Label" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="db3" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="db3Label" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="db4" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="db4Label" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="db5" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="db5Label" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="RegistrationDate" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="LastLoginDate" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="EmailAddress" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="IsOnline" Type="System.String" DbType="Char(10)" CanBeNull="true" />
+      <Column Name="IPAddress" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="InvitationCode" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="InvitationDate" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="Status" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="TimeZone" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="CultureInfoCode" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="ProfileImageURL" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.qryUserRoles" Member="qryUserRoles">
+    <Type Name="qryUserRole">
+      <Column Name="UserId" Type="System.String" DbType="NVarChar(128) NOT NULL" CanBeNull="false" />
+      <Column Name="RoleId" Type="System.String" DbType="NVarChar(128) NOT NULL" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(256) NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TimeZones" Member="TimeZones">
+    <Type Name="TimeZone">
+      <Column Name="TimeZoneID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Id" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="DisplayName" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="StandardName" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="DaylightName" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="SupportsDaylightSavingTime" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TestGroups" Member="TestGroups">
+    <Type Name="TestGroup">
+      <Column Name="GroupID" Type="System.String" DbType="NVarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="GroupTitle" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="SiteID" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
+      <Column Name="DefaultGroup" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.StudentsInGroups" Member="StudentsInGroups">
+    <Type Name="StudentsInGroup">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="UserName" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="TestGoupID" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Students" Member="Students">
+    <Type Name="Student">
+      <Column Name="Id" Type="System.String" DbType="NVarChar(128) NOT NULL" CanBeNull="false" />
+      <Column Name="UserName" Type="System.String" DbType="NVarChar(256) NOT NULL" CanBeNull="false" />
+      <Column Name="Email" Type="System.String" DbType="NVarChar(256)" CanBeNull="true" />
+      <Column Name="UserId" Type="System.String" DbType="NVarChar(128) NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.StudentsInCourse" Member="StudentsInCourses">
+    <Type Name="StudentsInCourse">
+      <Column Name="StudentInCourseID" Type="System.String" DbType="NVarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="UserName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="CourseID" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Status" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="PercentComplete" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="DateStarted" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="DateCompleted" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.StudentsInGroups" Member="StudentsInGroup1s">
+    <Type Name="StudentsInGroup1">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="UserName" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="TestGoupID" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Locations" Member="Locations">
+    <Type Name="Location">
+      <Column Name="LocationID" Type="System.String" DbType="NVarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="SiteID" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="LocationName" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="IP_Address" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="ContactName" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="ContactPhone" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="ContactEmail" Type="System.String" DbType="VarChar(255)" CanBeNull="true" />
+      <Column Name="Created" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="CreatedBy" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Modified" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="ModifiedBy" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Instructors" Member="Instructors">
+    <Type Name="Instructor">
+      <Column Name="InstructorID" Type="System.String" DbType="NVarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="SiteID" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="InstructorName" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="InstructorEmail" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="EnableEmailNotification" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.CultureResource" Member="CultureResources">
+    <Type Name="CultureResource">
+      <Column Name="PrimaryID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ID" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="CultureID" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="en_Value" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="Value" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Icons" Member="Icons">
+    <Type Name="Icon">
+      <Column Name="IconID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="IconName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="IconDetail" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.CourseWidgets" Member="CourseWidgets">
+    <Type Name="CourseWidget">
+      <Column Name="WidgetID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="CourseID" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="WidgetName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Title" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="UniqueTitle" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="DescriptionText" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="Enabled" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="Icon" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="[Order]" Member="Order" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="PageURL" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Color" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Dashboard" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="LeftNav" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="RightNav" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.CourseAnnouncements" Member="CourseAnnouncements">
+    <Type Name="CourseAnnouncement">
+      <Column Name="AnnouncementID" Type="System.String" DbType="NVarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="CourseID" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Title" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Description" Type="System.String" DbType="Text" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="StartDate" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="EndDate" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="NeverExpire" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="CreatedBy" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="CreatedDate" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="ModifiedBy" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="ModifiedDate" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.CourseAssignment" Member="CourseAssignments">
+    <Type Name="CourseAssignment">
+      <Column Name="AssignmentID" Type="System.String" DbType="NVarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="CourseID" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="StudentID" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="RelatedItemID" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Title" Type="System.String" DbType="NVarChar(255) NOT NULL" CanBeNull="false" />
+      <Column Name="Description" Type="System.String" DbType="Text" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="StartDate" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="DateDue" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="Link" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="AssignedBy" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="AssignmentType" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="AdminNotes" Type="System.String" DbType="Text" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="SiteID" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="AvailablePoints" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.CourseAssignmentResult" Member="CourseAssignmentResults">
+    <Type Name="CourseAssignmentResult">
+      <Column Name="ResultID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="AssignmentID" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="StudentID" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="CompletionDate" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="Score" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Result" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Graded" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="Completed" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.DashboardTabs" Member="DashboardTabs">
+    <Type Name="DashboardTab">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="SiteID" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="TabID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Title" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Widget" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Icon" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="ToolBarTitle" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="PageDescriptionText" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.DuscussionBoard" Member="DuscussionBoards">
+    <Type Name="DuscussionBoard">
+      <Column Name="BoardID" Type="System.String" DbType="NVarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="CourseID" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.DiscussionBoard" Member="DiscussionBoards">
+    <Type Name="DiscussionBoard">
+      <Column Name="BoardID" Type="System.String" DbType="NVarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="CourseID" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.DiscussionThread" Member="DiscussionThreads">
+    <Type Name="DiscussionThread">
+      <Column Name="ThreadID" Type="System.String" DbType="NVarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="TopicID" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="ParentID" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="CreatedBy" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="CreatedDate" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="BodyText" Type="System.String" DbType="Text" CanBeNull="true" UpdateCheck="Never" />
+    </Type>
+  </Table>
+  <Table Name="dbo.DiscussionTopic" Member="DiscussionTopics">
+    <Type Name="DiscussionTopic">
+      <Column Name="TopicID" Type="System.String" DbType="NVarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="BoardID" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Title" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="BodyText" Type="System.String" DbType="Text" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="CreatedBy" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="CreatedDate" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="Active" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TotalLessonCount_byCourseID" Member="TotalLessonCount_byCourseIDs">
+    <Type Name="TotalLessonCount_byCourseID">
+      <Column Name="CourseID" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="TotalLessons" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.CourseFiles_Count" Member="CourseFiles_Counts">
+    <Type Name="CourseFiles_Count">
+      <Column Name="CourseID" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="TotalFiles" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TestCount_byCourseID" Member="TestCount_byCourseIDs">
+    <Type Name="TestCount_byCourseID">
+      <Column Name="CourseID" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="TotalTests" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ActivityLog" Member="ActivityLogs">
+    <Type Name="ActivityLog">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Activity" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="ActivityID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="LogTime" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="UserName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="SiteID" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="IPAddress" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Details" Type="System.String" DbType="NVarChar(1000)" CanBeNull="true" />
+      <Column Name="SessionID" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="RelatedItemID" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="RelatedItemType" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CourseID" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="AssignmentID" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="TestID" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.CurruculumAssessment" Member="CurruculumAssessments">
+    <Type Name="CurruculumAssessment">
+      <Column Name="AssessmentID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="CurruculumListID" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="StudentID" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Assessment" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="DateStamp" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.CourseFiles" Member="CourseFiles">
+    <Type Name="CourseFile">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="FileID" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="CourseID" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="RelatedID" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.CourseLinks" Member="CourseLinks">
+    <Type Name="CourseLink">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="LinkID" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="CourseID" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Files" Member="Files">
+    <Type Name="File">
+      <Column Name="ID" Type="System.String" DbType="NVarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="FileName" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="ContentType" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="Size" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="Data" Type="System.Data.Linq.Binary" DbType="VarBinary(MAX) NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="SiteID" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="DateUploaded" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="UploadedBy" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Links" Member="Links">
+    <Type Name="Link">
+      <Column Name="ID" Type="System.String" DbType="NVarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="LinkTitle" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="LinkURL" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="SiteID" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.AssignmentFiles" Member="AssignmentFiles">
+    <Type Name="AssignmentFile">
+      <Column Name="AssignmentFileID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="AssignmentID" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="StudentID" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Status" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Version" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="FileID" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Type" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Test" Member="Tests">
+    <Type Name="Test">
+      <Column Name="QuizID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="TestID" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Title" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Local" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="SiteID" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="AgreementPage" Type="System.String" DbType="Text" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="Enabled" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="PassingGrade" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ShowResults" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="TimeLimit" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="prerequisite" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="CompletedText" Type="System.String" DbType="Text" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="GroupID" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="InstructorID" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="CourseID" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="FailedText" Type="System.String" DbType="Text" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="RetakeHours1" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="RetakeText1" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="RetakeHours2" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="RetakeText2" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="RetakeHours3" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="RetakeText3" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TestResults" Member="TestResults">
+    <Type Name="TestResult">
+      <Column Name="Title" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="DateTimeCompleted" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="Score" Type="System.String" DbType="NVarChar(256)" CanBeNull="true" />
+      <Column Name="Result" Type="System.String" DbType="NVarChar(256)" CanBeNull="true" />
+      <Column Name="TestSessionID" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="UserName" Type="System.String" DbType="NVarChar(256) NOT NULL" CanBeNull="false" />
+      <Column Name="StartTime" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.baretc_qryQuestions" Member="baretc_qryQuestions">
+    <Type Name="baretc_qryQuestion">
+      <Column Name="QuestionID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="TestID" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Title" Type="System.String" DbType="VarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="QuestionType" Type="System.String" DbType="VarChar(17)" CanBeNull="true" />
+      <Column Name="Points" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Questions" Member="Questions">
+    <Type Name="Question">
+      <Column Name="QuestionID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="QuizID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="TestID" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Title" Type="System.String" DbType="VarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="Answer1" Type="System.String" DbType="VarChar(1000)" CanBeNull="true" />
+      <Column Name="Answer2" Type="System.String" DbType="VarChar(1000)" CanBeNull="true" />
+      <Column Name="Answer3" Type="System.String" DbType="VarChar(1000)" CanBeNull="true" />
+      <Column Name="Answer4" Type="System.String" DbType="VarChar(1000)" CanBeNull="true" />
+      <Column Name="Answer5" Type="System.String" DbType="VarChar(1000)" CanBeNull="true" />
+      <Column Name="Answer6" Type="System.String" DbType="VarChar(1000)" CanBeNull="true" />
+      <Column Name="CorrectAnswer" Type="System.Byte" DbType="TinyInt" CanBeNull="true" />
+      <Column Name="AnswerExplanation" Type="System.String" DbType="VarChar(1000)" CanBeNull="true" />
+      <Column Name="QuestionOrder" Type="System.Byte" DbType="TinyInt" CanBeNull="true" />
+      <Column Name="CopiedFromQuestionID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="DesiredOrder" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Points" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="QuestionType" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="AnswerText" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="CorrectAnswerText" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TestScores" Member="TestScores">
+    <Type Name="TestScore">
+      <Column Name="UserTestID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="TestID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ID" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="DateTimeCompleted" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="Score" Type="System.String" DbType="NVarChar(256)" CanBeNull="true" />
+      <Column Name="Result" Type="System.String" DbType="NVarChar(256)" CanBeNull="true" />
+      <Column Name="UserName" Type="System.String" DbType="NVarChar(256) NOT NULL" CanBeNull="false" />
+      <Column Name="Terminal" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="TestSessionID" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="StartTime" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="TotalElapTime" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="RetakeTestHrs" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="PassingGrade" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TestSession" Member="TestSessions">
+    <Type Name="TestSession">
+      <Column Name="SessionID" Type="System.String" DbType="VarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="UserName" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="QuizID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="TestID" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="CurrentQuestionID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="IPAddress" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="StartDate" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="SiteID" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Status" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="TimeLimit" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="RunningTime" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.AnswerList" Member="AnswerLists">
+    <Type Name="AnswerList">
+      <Column Name="AnswerListID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="TestSessionID" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="QuizID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="TestID" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="QuestionID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CorrectAnswer" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="UserAnswer" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="FillInAnswer" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="RealQuestionID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="EarnedPoints" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Result" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.baretc_TestResults" Member="baretc_TestResults">
+    <Type Name="baretc_TestResult">
+      <Column Name="Title" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="ID" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="DateTimeCompleted" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="Score" Type="System.String" DbType="NVarChar(256)" CanBeNull="true" />
+      <Column Name="Result" Type="System.String" DbType="NVarChar(256)" CanBeNull="true" />
+      <Column Name="TestSessionID" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="UserName" Type="System.String" DbType="NVarChar(256) NOT NULL" CanBeNull="false" />
+      <Column Name="StartTime" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="CourseID" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.getCurriculumResult" Member="getCurriculumResults">
+    <Type Name="getCurriculumResult">
+      <Column Name="ResultID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="StudentInCourseID" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="DateCompleted" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Completed" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="CurriculumTitle" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="CurriculumID" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="CurriculumGroupID" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.qryGetCourseListByUserID" Member="qryGetCourseListByUserIDs">
+    <Type Name="qryGetCourseListByUserID">
+      <Column Name="UserName" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="CourseTitle" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="CourseID" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="UserID" Type="System.String" DbType="NVarChar(128) NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.CurriculumResult" Member="CurriculumResults">
+    <Type Name="CurriculumResult">
+      <Column Name="ResultID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="StudentInCourseID" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="CurriculumID" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="DateCompleted" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Completed" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="UserName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.UserInCourse" Member="UserInCourses">
+    <Type Name="UserInCourse">
+      <Column Name="UserInCourseID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="UserID" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="CourseID" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.CurriculumGroup" Member="CurriculumGroups">
+    <Type Name="CurriculumGroup">
+      <Column Name="CurriculumGroupID" Type="System.String" DbType="NVarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="CourseID" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Title" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="RequiredGroupID" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="StartDate" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="SortOrder" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="PreRequisiteRequired" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="Required" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="Hold" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="Enabled" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.qryViewHistoryLog" Member="qryViewHistoryLogs">
+    <Type Name="qryViewHistoryLog">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="UserID" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="UserName" Type="System.String" DbType="NVarChar(256) NOT NULL" CanBeNull="false" />
+      <Column Name="[Full Name]" Member="Full_Name" Type="System.String" DbType="NVarChar(101)" CanBeNull="true" />
+      <Column Name="EventID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="[ActivityDate(CST)]" Member="ActivityDate_CST_" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Activity" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="PageURL" Type="System.String" DbType="NVarChar(256)" CanBeNull="true" />
+      <Column Name="Details" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="IPAddress" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="UserAgent" Type="System.String" DbType="NVarChar(256)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.CorrectAnswer" Member="CorrectAnswers">
+    <Type Name="CorrectAnswer">
+      <Column Name="CorrectAnswerID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="QuestionID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CorrectAnswer" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.getDistinctCurriculumResults" Member="getDistinctCurriculumResults">
+    <Type Name="getDistinctCurriculumResult">
+      <Column Name="CurriculumID" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="CourseID" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="CurriculumGroupID" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="UserName" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Function Name="dbo.getApplicantFirstLastName" Method="getApplicantFirstLastName">
+    <Parameter Name="UserGuid" Parameter="userGuid" Type="System.String" DbType="NVarChar(50)" />
+    <ElementType Name="getApplicantFirstLastNameResult">
+      <Column Name="FirstName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="LastName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.getAvailableRoles" Method="getAvailableRoles">
+    <Parameter Name="userID" Type="System.String" DbType="NVarChar(50)" />
+    <ElementType Name="getAvailableRolesResult">
+      <Column Name="DataKeyID" Type="System.String" DbType="NVarChar(128) NOT NULL" CanBeNull="false" />
+      <Column Name="InsertID" Type="System.String" DbType="NVarChar(128) NOT NULL" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(256) NOT NULL" CanBeNull="false" />
+      <Column Name="roleID" Type="System.String" DbType="NVarChar(128) NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.getCurriculumByGroupID" Method="getCurriculumByGroupID">
+    <Parameter Name="curriculumGroupID" Type="System.String" DbType="NVarChar(50)" />
+    <ElementType Name="getCurriculumByGroupIDResult">
+      <Column Name="CurriculumID" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="CurriculumTitle" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="CurriculumGroupID" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="CourseID" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Text" Type="System.String" DbType="Text" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="SortOrder" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="DesiredOrder" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Enabled" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="ComplexityLevel" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Required" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="Points" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.AvailableTests" Method="AvailableTests">
+    <Parameter Name="UserName" Parameter="userName" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="SiteID" Parameter="siteID" Type="System.String" DbType="VarChar(50)" />
+    <ElementType Name="AvailableTestsResult">
+      <Column Name="prerequisite" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="QuizID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Title" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Enabled" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="Score" Type="System.String" DbType="NVarChar(256)" CanBeNull="true" />
+      <Column Name="DateTimeCompleted" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="PassingGrade" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Result" Type="System.String" DbType="VarChar(11) NOT NULL" CanBeNull="false" />
+      <Column Name="dbGUID" Type="System.String" DbType="NVarChar(256) NOT NULL" CanBeNull="false" />
+      <Column Name="UserName" Type="System.String" DbType="NVarChar(256)" CanBeNull="true" />
+      <Column Name="RetakeTestHrs" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="SiteID" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="PreReqResult" Type="System.String" DbType="NVarChar(256)" CanBeNull="true" />
+      <Column Name="PreReqTitle" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="GroupID" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="InstructorID" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.AvailableTestList" Method="AvailableTestList">
+    <Parameter Name="UserName" Parameter="userName" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="SiteID" Parameter="siteID" Type="System.String" DbType="NVarChar(50)" />
+    <ElementType Name="AvailableTestListResult">
+      <Column Name="QuizID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="TestID" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Title" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Score" Type="System.String" DbType="NVarChar(256)" CanBeNull="true" />
+      <Column Name="DateTimeCompleted" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="PassingGrade" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="RetakeDate" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="Result" Type="System.String" DbType="VarChar(11) NOT NULL" CanBeNull="false" />
+      <Column Name="Enabled" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="dbGUID" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="UserName" Type="System.String" DbType="NVarChar(256)" CanBeNull="true" />
+      <Column Name="RetakeTestHrs" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="SiteID" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.StartTest" Method="StartTest">
+    <Parameter Name="SessionID" Parameter="sessionID" Type="System.String" DbType="VarChar(50)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.UpdateAnswerList" Method="UpdateAnswerList">
+    <Parameter Name="TestSessionID" Parameter="testSessionID" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="QuizID" Parameter="quizID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="QuestionID" Parameter="questionID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="CorrectAnswer" Parameter="correctAnswer" Type="System.Int32" DbType="Int" />
+    <Parameter Name="UserAnswer" Parameter="userAnswer" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.UpdateAnswerList1" Method="UpdateAnswerList1">
+    <Parameter Name="TestSessionID" Parameter="testSessionID" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="QuizID" Parameter="quizID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="QuestionID" Parameter="questionID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="CorrectAnswer" Parameter="correctAnswer" Type="System.Int32" DbType="Int" />
+    <Parameter Name="UserAnswer" Parameter="userAnswer" Type="System.Int32" DbType="Int" />
+    <Parameter Name="EarnedPoints" Parameter="earnedPoints" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Result" Parameter="result" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="FillInAnswer" Parameter="fillInAnswer" Type="System.String" DbType="VarChar(50)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.baretc_CurentAvailableTestsByCourse" Method="baretc_CurentAvailableTestsByCourse">
+    <Parameter Name="UserName" Parameter="userName" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="CourseID" Parameter="courseID" Type="System.String" DbType="VarChar(50)" />
+    <ElementType Name="baretc_CurentAvailableTestsByCourseResult">
+      <Column Name="TestID" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Title" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Result" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="Score" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="TestResult" Type="System.String" DbType="VarChar(9)" CanBeNull="true" />
+      <Column Name="PassingGrade" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.baretc_CurentAvailableTestsByAmbassador" Method="baretc_CurentAvailableTestsByAmbassador">
+    <Parameter Name="UserName" Parameter="userName" Type="System.String" DbType="VarChar(50)" />
+    <ElementType Name="baretc_CurentAvailableTestsByAmbassadorResult">
+      <Column Name="TestID" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Title" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Result" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="Score" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="TestResult" Type="System.String" DbType="VarChar(9)" CanBeNull="true" />
+      <Column Name="PassingGrade" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.baretc_BrandTrainingResult" Method="baretc_BrandTrainingResult">
+    <Parameter Name="UserName" Parameter="userName" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="siteID" Type="System.String" DbType="NVarChar(50)" />
+    <ElementType Name="baretc_BrandTrainingResultResult">
+      <Column Name="CourseTitle" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="CourseID" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="TestCount" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="PassedCount" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CurriculumCompletedCount" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CurriculumCount" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.AddStudentToAllCourses" Method="AddStudentToAllCourses">
+    <Parameter Name="userName" Type="System.String" DbType="NVarChar(50)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.getCompletedCurriculumCountByGroup" Method="getCompletedCurriculumCountByGroup">
+    <Parameter Name="CurriculumID" Parameter="curriculumID" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="StudentInCourseID" Parameter="studentInCourseID" Type="System.String" DbType="NVarChar(50)" />
+    <ElementType Name="getCompletedCurriculumCountByGroupResult">
+      <Column Name="ResultID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="StudentInCourseID" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="DateCompleted" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Completed" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="CurriculumTitle" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="CurriculumID" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.getCurriculumListByGRoup" Method="getCurriculumListByGRoup">
+    <Parameter Name="userID" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="courseID" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="curriculumGroupID" Type="System.String" DbType="NVarChar(50)" />
+    <ElementType Name="getCurriculumListByGRoupResult">
+      <Column Name="CurriculumID" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="CurriculumTitle" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="CurriculumGroupID" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Title" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Text" Type="System.String" DbType="Text" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="RequiredGroupID" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="RequiredGroupName" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="CourseID" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="SortOrder" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Enabled" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="Required" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="DateCompleted" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="CurriculumType" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="backgroundcss" Type="System.String" DbType="VarChar(6)" CanBeNull="true" />
+      <Column Name="RequiredGroupCompleted" Type="System.String" DbType="VarChar(5) NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.getCurriculumItems" Method="getCurriculumItems">
+    <Parameter Name="CourseID" Parameter="courseID" Type="System.String" DbType="NVarChar(50)" />
+    <ElementType Name="getCurriculumItemsResult">
+      <Column Name="CurriculumGroupID" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="CourseID" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Title" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="RequiredGroupID" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="StartDate" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="SortOrder" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="PreRequisiteRequired" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="Required" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="Hold" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="Enabled" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="TotalCurriculum" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.DeleteStaffLogin" Method="DeleteStaffLogin">
+    <Parameter Name="userID" Type="System.String" DbType="NVarChar(50)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.DeleteCourseFile" Method="DeleteCourseFile">
+    <Parameter Name="CourseID" Parameter="courseID" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="FileID" Parameter="fileID" Type="System.String" DbType="NVarChar(50)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.DeleteSelectedCourseFile" Method="DeleteSelectedCourseFile">
+    <Parameter Name="FileID" Parameter="fileID" Type="System.String" DbType="NVarChar(50)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.baretc_BrandTrainingResultByCourseID" Method="baretc_BrandTrainingResultByCourseID">
+    <Parameter Name="UserName" Parameter="userName" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="courseID" Type="System.String" DbType="NVarChar(50)" />
+    <ElementType Name="baretc_BrandTrainingResultByCourseIDResult">
+      <Column Name="CourseTitle" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="CourseID" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="TestCount" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="PassedCount" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CurriculumCompletedCount" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CurriculumCount" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.AddStudentToCourse" Method="AddStudentToCourse">
+    <Parameter Name="userName" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="courseID" Type="System.String" DbType="NVarChar(50)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.BrandTrainingResultByUserID" Method="BrandTrainingResultByUserID">
+    <Parameter Name="UserName" Parameter="userName" Type="System.String" DbType="NVarChar(50)" />
+    <ElementType Name="BrandTrainingResultByUserIDResult">
+      <Column Name="UserName" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="CourseTitle" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="CourseID" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="UserID" Type="System.String" DbType="NVarChar(128) NOT NULL" CanBeNull="false" />
+      <Column Name="TestCount" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="PassedCount" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CurriculumCompletedCount" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CurriculumCount" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.AddUserToCourse" Method="AddUserToCourse">
+    <Parameter Name="userID" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="courseID" Type="System.String" DbType="NVarChar(50)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.RemoveUserFromCourse" Method="RemoveUserFromCourse">
+    <Parameter Name="userID" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="courseID" Type="System.String" DbType="NVarChar(50)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.GetCurriculumByCurriculumGroupID" Method="GetCurriculumByCurriculumGroupID">
+    <Parameter Name="CurriculumGroupID" Parameter="curriculumGroupID" Type="System.String" DbType="NVarChar(50)" />
+    <ElementType Name="GetCurriculumByCurriculumGroupIDResult">
+      <Column Name="CurriculumID" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="CurriculumTitle" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="CurriculumGroupID" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="CourseID" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="type" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="SortOrder" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Enabled" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="ComplexityLevel" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Required" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="Points" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="url" Type="System.String" DbType="NVarChar(90)" CanBeNull="true" />
+      <Column Name="completed" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="last24hours" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="thisweek" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="lastweek" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.InsertHistoryLog" Method="InsertHistoryLog">
+    <Parameter Name="UserID" Parameter="userID" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="EventID" Parameter="eventID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="LogTime" Parameter="logTime" Type="System.DateTime" DbType="DateTime" />
+    <Parameter Name="Activity" Parameter="activity" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="Details" Parameter="details" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="IPAddress" Parameter="iPAddress" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="UserAgent" Parameter="userAgent" Type="System.String" DbType="NVarChar(256)" />
+    <Parameter Name="PageURL" Parameter="pageURL" Type="System.String" DbType="NVarChar(256)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.BrandGroupTrainingResultByUserID" Method="BrandGroupTrainingResultByUserID">
+    <Parameter Name="UserName" Parameter="userName" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="courseGroupID" Type="System.String" DbType="NVarChar(50)" />
+    <ElementType Name="BrandGroupTrainingResultByUserIDResult">
+      <Column Name="UserName" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="CourseTitle" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="CourseID" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="UserID" Type="System.String" DbType="NVarChar(128) NOT NULL" CanBeNull="false" />
+      <Column Name="CurriculumCompletedCount" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CurriculumCount" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.UpdateSavedAnswerList" Method="UpdateSavedAnswerList">
+    <Parameter Name="TestSessionID" Parameter="testSessionID" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="QuestionID" Parameter="questionID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="UserAnswer" Parameter="userAnswer" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Result" Parameter="result" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="FillInAnswer" Parameter="fillInAnswer" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="EarnedPoints" Parameter="earnedPoints" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+</Database>

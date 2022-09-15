@@ -1,0 +1,29 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>addMultipleLayerItemsHTML</title>
+    <meta http-equiv='Content-Type' content='text/html; charset=utf-8' />
+</head>
+<body>
+    <div id='printoutPanel'></div>
+
+    <div id='myMap' style='width: 100vw; height: 100vh;'></div>
+    <script type='text/javascript'>
+            function loadMapScenario() {
+                var map = new Microsoft.Maps.Map(document.getElementById('myMap'), {
+                    credentials: 'AtZLhyYLi346YOtzBdKNz_1w5wJFUyGxNqgw-ShJ3zNmDp84EEiGQXcN7VfbzTJj'
+                });
+                // Generate an array of 10 random pushpins within current map bounds
+                var pushpins = Microsoft.Maps.TestDataGenerator.getPushpins(10, map.getBounds());
+                var layer = new Microsoft.Maps.Layer();
+                layer.add(pushpins);
+                map.layers.insert(layer);
+
+            }
+
+
+
+    </script>
+    <script type='text/javascript' src='http://www.bing.com/api/maps/mapcontrol?branch=release&callback=loadMapScenario' async defer></script>
+</body>
+</html>

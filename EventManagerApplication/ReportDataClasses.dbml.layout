@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 13.75, 8.5" name="ReportDataClasses">
+  <DataContextMoniker Name="/ReportDataClassesDataContext" />
+  <nestedChildShapes>
+    <classShape Id="33e909e4-4e71-41f1-8e73-716124cac2c4" absoluteBounds="3.125, 3, 2, 1.3862939453125005">
+      <DataClassMoniker Name="/ReportDataClassesDataContext/rptMarketFilter" />
+      <nestedChildShapes>
+        <elementListCompartment Id="0b90b1b7-3f7d-478c-9411-40a1bd4c4cec" absoluteBounds="3.14, 3.46, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="28d36fa9-fd53-4d30-9e18-122b64d7cf75" absoluteBounds="3.25, 0.75, 2, 1.9631982421875">
+      <DataClassMoniker Name="/ReportDataClassesDataContext/rptField" />
+      <nestedChildShapes>
+        <elementListCompartment Id="7440c06c-2de3-492e-a171-cba7eb8a6694" absoluteBounds="3.2649999999999997, 1.21, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="c7b4ee2d-0b5e-4363-bb3d-e4a808adf1ec" absoluteBounds="3.125, 4.75, 2, 1.3862939453125">
+      <DataClassMoniker Name="/ReportDataClassesDataContext/rptSupplierFilter" />
+      <nestedChildShapes>
+        <elementListCompartment Id="6e46c5fb-5e2d-4100-bf42-ed003aaa18ad" absoluteBounds="3.1399999999999997, 5.21, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="95b54823-2b31-4618-95fe-25b97e16a787" absoluteBounds="8.875, 1.125, 2, 2.1554996744791666">
+      <DataClassMoniker Name="/ReportDataClassesDataContext/rptColumn" />
+      <nestedChildShapes>
+        <elementListCompartment Id="fb43e89e-60b0-48e7-a51a-1f1f023e1f5c" absoluteBounds="8.89, 1.585, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="c5da9109-bae5-49b5-bb30-58154a0ef0da" absoluteBounds="8.875, 3.625, 2, 1.3862939453125">
+      <DataClassMoniker Name="/ReportDataClassesDataContext/rptEventTypeFilter" />
+      <nestedChildShapes>
+        <elementListCompartment Id="e6715e46-cb03-4c32-b6bd-0cbf6e7e2cbd" absoluteBounds="8.89, 4.085, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="771b7684-5e48-408a-81a4-8062bb805aff" absoluteBounds="11.5, 1.75, 2, 1.3862939453125">
+      <DataClassMoniker Name="/ReportDataClassesDataContext/rptStatusFilter" />
+      <nestedChildShapes>
+        <elementListCompartment Id="bcd7bdca-6ec8-4649-bf5d-66496740e205" absoluteBounds="11.515, 2.21, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="4374725d-df74-4a88-a03b-2398b79de18f" absoluteBounds="6.625, 0.625, 2, 5.6169254557291657">
+      <DataClassMoniker Name="/ReportDataClassesDataContext/rptReport" />
+      <nestedChildShapes>
+        <elementListCompartment Id="37a4262b-a15a-40f9-a3aa-637ae25b6ff0" absoluteBounds="6.64, 1.085, 1.9700000000000002, 5.0569254557291661" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="d764480e-1e2a-4ce4-b013-553f1d1a21e5" absoluteBounds="11.5, 3.625, 2, 1.9631982421875">
+      <DataClassMoniker Name="/ReportDataClassesDataContext/getEventReportList" />
+      <nestedChildShapes>
+        <elementListCompartment Id="0a999f9d-e7c0-4f7a-8d61-18d327ec4c8d" absoluteBounds="11.515, 4.085, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

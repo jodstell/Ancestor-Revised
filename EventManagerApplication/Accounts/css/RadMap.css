@@ -1,0 +1,28 @@
+﻿.RadMap .k-marker.k-marker-venue:before {
+    color: #fe9a00;
+    font-size:25px;
+}
+.RadMap .k-marker.k-marker-bar-nightclub:before {
+    color: #790091;
+    font-size:25px;
+}
+.RadMap .k-marker.k-marker-retail-off-Premise:before {
+    color: #c9302b;
+    font-size:25px;
+}
+.RadMap .k-marker.k-marker-pin-target:before {
+    color: #005991;
+    font-size:25px;
+}
+.RadMap .k-marker.k-marker-cancelled:before {
+    color: #52b7e9;
+    font-size:25px;
+}
+
+
+/*map tooltip*/
+.RadMap_Bootstrap.k-widget.k-tooltip {
+    text-align: left;
+    background-color: #ffffff !important;
+    color: #000 !important;
+}

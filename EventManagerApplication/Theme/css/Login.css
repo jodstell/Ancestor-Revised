@@ -1,0 +1,109 @@
+body {
+  margin: 80px 0;
+  background-image: none;
+  background-color: #333;
+}
+
+.errorlabel {
+    color: #B94A48;
+    font-size: 11px;
+    font-weight: 600;
+    position: relative;
+    left: -15px;
+    padding: 4px 8px;
+    margin-bottom: 1em;
+    color: #FFF;
+    background: #B94A48;
+    border-top-right-radius: 3px;
+    border-top-left-radius: 3px;
+    border-bottom-right-radius: 3px;
+    border-bottom-left-radius: 3px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.35);
+}
+
+#login-container {
+  position: relative;
+  width: 90%;
+  margin: 0 auto;
+  text-align: center;
+}
+#login-container .row > div {
+  margin-bottom: 1em;
+}
+#login-container .row > div:last-child {
+  margin-bottom: 0;
+}
+#login-container #logo {
+  position: absolute;
+  top: -50px;
+  left: 44%;
+  z-index: 100;
+  width: 120px;
+  height: 120px;
+  margin-left: -50px;
+  /*background-color: #fff;
+  border-top-right-radius: 120px;
+  border-top-left-radius: 120px;
+  border-bottom-right-radius: 120px;
+  border-bottom-left-radius: 120px;*/
+}
+#login-container #logo:hover {
+  /*background-color: #fff;*/
+}
+#login-container #signup-btn {
+  padding-top: 15px;
+  padding-bottom: 15px;
+  color: #fff;
+  background-color: #222222;
+  border-color: #1d1d1d;
+}
+#login-container #signup-btn:hover {
+  background-color: #1d1d1d;
+  border-color: #181818;
+}
+#login {
+  position: relative;
+  padding: 5px 25px 50px 25px;
+  margin-bottom: 1em;
+  background-color: #FFF;
+  border-top-right-radius: 4px;
+  border-top-left-radius: 4px;
+  border-bottom-right-radius: 4px;
+  border-bottom-left-radius: 4px;
+  -webkit-box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.65);
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.65);
+    top: 0px;
+    left: 0px;
+    height: 548px;
+}
+#login #login-form {
+  padding: 0;
+  margin-top: 2em;
+  margin-bottom: 2em;
+  text-align: left;
+}
+#login #login-form label {
+  display: none;
+}
+#login #login-form .form-control {
+  height: 40px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
+#login #login-btn {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font-size: 20px;
+}
+@media (min-width: 768px) {
+  #login-container {
+    width: 450px;
+  }
+  #login-container .row > div {
+    margin-bottom: 0;
+  }
+  #login #login-form {
+    padding: 0 25px;
+    text-align: left;
+  }
+}

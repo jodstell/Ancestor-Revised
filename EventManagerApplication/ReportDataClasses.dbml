@@ -1,0 +1,107 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="EventManagerData" Class="ReportDataClassesDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="WebSettings" ConnectionString="Data Source=proofmktg.database.windows.net,1433;Initial Catalog=EventManagerData;Persist Security Info=True;User ID=Pappy" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="DefaultConnection" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.rptMarketFilter" Member="rptMarketFilters">
+    <Type Name="rptMarketFilter">
+      <Column Name="marketFilterID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="reportID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="marketID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.rptField" Member="rptFields">
+    <Type Name="rptField">
+      <Column Name="fieldID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="tableName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="fieldName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="fieldType" Type="System.Byte" DbType="TinyInt" CanBeNull="true" />
+      <Column Name="fieldTitle" Type="System.String" DbType="NVarChar(256)" CanBeNull="true" />
+      <Column Name="sortOrder" Type="System.Byte" DbType="TinyInt" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.rptSupplierFilter" Member="rptSupplierFilters">
+    <Type Name="rptSupplierFilter">
+      <Column Name="supplierFilterID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="reportID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="supplierID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.rptColumn" Member="rptColumns">
+    <Type Name="rptColumn">
+      <Column Name="columnID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="reportID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="dataField" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="headerText" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="columnType" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="sortOrder" Type="System.Byte" DbType="TinyInt" CanBeNull="true" />
+      <Column Name="tableName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.rptEventTypeFilter" Member="rptEventTypeFilters">
+    <Type Name="rptEventTypeFilter">
+      <Column Name="eventTypeFilterID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="reportID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="eventTypeID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.rptStatusFilter" Member="rptStatusFilters">
+    <Type Name="rptStatusFilter">
+      <Column Name="statusFilterID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="reportID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="statusID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.rptReport" Member="rptReports">
+    <Type Name="rptReport">
+      <Column Name="reportID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="reportName" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="reportGroupID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="description" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="active" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="createdBy" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="createdDate" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="modifiedBy" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="modifiedDate" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="startDate" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="endDate" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="supplierID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="eventTypeID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="allowFilter" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="allowSorting" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="allowReorder" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="groupBy" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="fileName" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="reportTitle" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="allowGrouping" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="exportPDF" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="exportExcel" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="exportCSV" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="exportWord" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="showByBrand" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.getEventReportList" Member="getEventReportLists">
+    <Type Name="getEventReportList">
+      <Column Name="reportID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="reportTitle" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="modifiedBy" Type="System.String" DbType="NVarChar(101)" CanBeNull="true" />
+      <Column Name="modifiedDate" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="active" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="clientID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Function Name="dbo.DeleteMarketFilter_EventReport" Method="DeleteMarketFilter_EventReport">
+    <Parameter Name="reportID" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.DeleteFilter_EventReport" Method="DeleteFilter_EventReport">
+    <Parameter Name="reportID" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.DeleteStatusFilter_EventReport" Method="DeleteStatusFilter_EventReport">
+    <Parameter Name="reportID" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.DeleteEventTypeFilter_EventReport" Method="DeleteEventTypeFilter_EventReport">
+    <Parameter Name="reportID" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+</Database>

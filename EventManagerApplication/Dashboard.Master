@@ -1,0 +1,471 @@
+﻿<%@ Master Language="VB" AutoEventWireup="false" CodeBehind="Dashboard.master.vb" Inherits="EventManagerApplication.PrivateDashboard" %>
+
+<%@ Import Namespace="EventManagerApplication" %>
+<%@ Import Namespace="Microsoft.AspNet.Identity" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <meta charset="utf-8" />
+    <title><%: Page.Title %> - GigEngyn</title>
+
+    <meta name="robots" content="noindex" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+
+
+    <link href="/theme/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="/theme/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet" />
+
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans:400italic,600italic,400,600" rel="stylesheet" />
+
+    <link href="/theme/css/ui-lightness/jquery-ui-1.10.0.custom.min.css" rel="stylesheet" />
+
+    <link href="/theme/css/base-admin-3.css" rel="stylesheet" />
+    <link href="/theme/css/base-admin-3-responsive.css" rel="stylesheet" />
+    <link href="/theme/css/pages/dashboard.css" rel="stylesheet" />
+    <link href="Theme/css/custom.css" rel="stylesheet" />
+    <link href="Theme/css/custom1.css" rel="stylesheet" />
+
+    <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <asp:PlaceHolder runat="server">
+        <%: Scripts.Render("~/bundles/modernizr") %>
+    </asp:PlaceHolder>
+
+    <%-- <webopt:bundlereference runat="server" path="~/Content/css" />--%>
+    <link href="~/icon.png" rel="shortcut icon" type="image/x-icon" />
+
+    <%--  <script type="text/javascript">
+        var appInsights = window.appInsights || function (config) {
+            function r(config) { t[config] = function () { var i = arguments; t.queue.push(function () { t[config].apply(t, i) }) } } var t = { config: config }, u = document, e = window, o = "script", s = u.createElement(o), i, f; for (s.src = config.url || "//az416426.vo.msecnd.net/scripts/a/ai.0.js", u.getElementsByTagName(o)[0].parentNode.appendChild(s), t.cookie = u.cookie, t.queue = [], i = ["Event", "Exception", "Metric", "PageView", "Trace"]; i.length;) r("track" + i.pop()); return r("setAuthenticatedUserContext"), r("clearAuthenticatedUserContext"), config.disableExceptionTracking || (i = "onerror", r("_" + i), f = e[i], e[i] = function (config, r, u, e, o) { var s = f && f(config, r, u, e, o); return s !== !0 && t["_" + i](config, r, u, e, o), s }), t
+        }({
+            instrumentationKey: "eac16bd9-3810-4082-92a5-8dd297be4baf"
+        });
+
+        window.appInsights = appInsights;
+        appInsights.trackPageView();
+    </script>--%>
+
+
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body id="master_body" runat="server">
+    <form id="form1" runat="server">
+        <asp:ScriptManager runat="server">
+            <Scripts>
+                <%--To learn more about bundling scripts in ScriptManager see http://go.microsoft.com/fwlink/?LinkID=301884 --%>
+                <%--Framework Scripts--%>
+                <asp:ScriptReference Name="MsAjaxBundle" />
+                <asp:ScriptReference Name="jquery" />
+                <asp:ScriptReference Name="bootstrap" />
+                <asp:ScriptReference Name="respond" />
+                <asp:ScriptReference Name="WebForms.js" Assembly="System.Web" Path="~/Scripts/WebForms/WebForms.js" />
+                <asp:ScriptReference Name="WebUIValidation.js" Assembly="System.Web" Path="~/Scripts/WebForms/WebUIValidation.js" />
+                <asp:ScriptReference Name="MenuStandards.js" Assembly="System.Web" Path="~/Scripts/WebForms/MenuStandards.js" />
+                <asp:ScriptReference Name="GridView.js" Assembly="System.Web" Path="~/Scripts/WebForms/GridView.js" />
+                <asp:ScriptReference Name="DetailsView.js" Assembly="System.Web" Path="~/Scripts/WebForms/DetailsView.js" />
+                <asp:ScriptReference Name="TreeView.js" Assembly="System.Web" Path="~/Scripts/WebForms/TreeView.js" />
+                <asp:ScriptReference Name="WebParts.js" Assembly="System.Web" Path="~/Scripts/WebForms/WebParts.js" />
+                <asp:ScriptReference Name="Focus.js" Assembly="System.Web" Path="~/Scripts/WebForms/Focus.js" />
+                <asp:ScriptReference Name="WebFormsBundle" />
+                <%--Site Scripts--%>
+            </Scripts>
+        </asp:ScriptManager>
+
+        <style>
+            .navbar-text {
+                margin-bottom: 0;
+            }
+
+            .navbar-inverse .navbar-text {
+                margin-left: -45px;
+                color: #FFF;
+                margin-top: 30px;
+            }
+
+            .navbar > .container .navbar-brand, .navbar > .container-fluid .navbar-brand {
+                margin-left: -30px;
+            }
+
+            @media only screen and (max-width: 850px) {
+                .navbar > .container .navbar-brand, .navbar > .container-fluid .navbar-brand {
+                    margin-left: -10px;
+                }
+            }
+
+            @media only screen and (min-width: 990px) and (max-width: 1180px) {
+                .subnav-collapse.collapse {
+                    width: 943px;
+                }
+            }
+
+            @media only screen and (min-width: 770px) and (max-width: 980px) {
+                .mobileBar {
+                    float: left !important;
+                    background-color: #4A4A4A;
+                }
+            }
+        </style>
+
+        <asp:HiddenField ID="HiddenClientID" runat="server" />
+
+        <nav class="navbar navbar-inverse" role="navigation">
+
+            <div class="container">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header" style="padding-right: 3px; padding-left: 17px;">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <i class="icon-cog"></i>
+                    </button>
+                    <a class="navbar-brand" href="/dashboard">
+                        <asp:Label ID="ClientNameLabel" runat="server"></asp:Label>
+                    </a>
+                </div>
+
+
+                <asp:Panel ID="TopRightNavPanel" runat="server">
+                    <div class="collapse navbar-collapse navbar-ex1-collapse" style="display: inherit;">
+                        <ul class="nav navbar-nav navbar-right">
+
+                            <li class="dropdown">
+
+                                <a href="javscript:;" class="dropdown-toggle" data-toggle="dropdown">
+                                    <i class="icon-user"></i>&nbsp;&nbsp;<asp:Label ID="FullNameLabel" runat="server" Text="My Name"></asp:Label>
+                                    <b class="caret"></b>
+                                </a>
+
+                                <ul class="dropdown-menu">
+                                    <li><a href="/application/profile">My Profile</a></li>
+                                    <li><a href="/Account/ManagePassword">Change Password</a></li>
+                                    <li class="divider"></li>
+                                    <li><a href="/account/logout">Logout</a></li>
+                                </ul>
+
+                            </li>
+
+                            <%--                            <li class="dropdown">
+
+                                <a href="javscript:;" class="dropdown-toggle" data-toggle="dropdown">
+                                    
+                                    <asp:Label ID="ClientNameLabel2" runat="server" />
+                                    <b class="caret"></b>
+                                </a>
+
+                                <ul class="dropdown-menu">
+
+                                    <asp:Repeater ID="ClientMenuRepeater" runat="server" DataSourceID="getClientList">
+                                        <ItemTemplate>
+                                            <li id="menu1" runat="server">
+                                                <asp:LinkButton ID="btnMenuItem" runat="server" CommandArgument='<%# Eval("clientID") %>' CommandName="ChangeClient"><%# Eval("clientName") %></asp:LinkButton></li>
+                                        </ItemTemplate>
+
+                                    </asp:Repeater>
+
+                                   
+                                    <asp:SqlDataSource runat="server" ID="getClientList" ConnectionString='<%$ ConnectionStrings:DefaultConnection %>' SelectCommand="GetActiveClientsByUserID" SelectCommandType="StoredProcedure">
+                                        <SelectParameters>
+                                            <asp:SessionParameter SessionField="CurrentUserID" Name="userID" Type="String"></asp:SessionParameter>
+
+                                        </SelectParameters>
+                                    </asp:SqlDataSource>
+                                </ul>
+
+                            </li>--%>
+                        </ul>
+
+
+                    </div>
+                    <!-- /.navbar-collapse -->
+                </asp:Panel>
+
+
+
+            </div>
+            <!-- /.container -->
+        </nav>
+
+
+
+        <div class="subnavbar">
+
+            <div class="subnavbar-inner">
+
+                <div class="container">
+
+                    <a href="javascript:;" class="subnav-toggle" data-toggle="collapse" data-target=".subnav-collapse">
+                        <%--<span class="glyphicon glyphicon-align-justify"></span>--%>
+                        <i class="fa fa-bars" aria-hidden="true" style="color: white;"></i>
+                    </a>
+
+
+
+                    <div class="collapse subnav-collapse">
+                        <ul class="mainnav">
+
+                            <li id="dashboardTab" runat="server">
+                                <a id="dashboard" href="/dashboard">
+                                    <span>Dashboard</span>
+                                </a>
+                            </li>
+
+                            <li id="ambassadorTab" runat="server">
+                                <a id="ambassador" href="/ambassadors/dashboard">Dashboard
+                                </a>
+                            </li>
+
+                            <<li id="events" runat="server">
+                                <a href="/Events/ViewEvents">Events</a>
+                            </li>
+
+                            <li class="dropdown" id="events_dropdown" runat="server">
+
+                                <a href="javscript:;" class="dropdown-toggle" data-toggle="dropdown">Events
+                                    <b class="caret"></b>
+                                </a>
+
+                                <ul class="dropdown-menu">
+                                    <li><a href="/Events/ViewEvents">View Events</a></li>
+                                    <li><a href="/Events/ViewAssignments">View Assignments</a></li>
+                                    <li><a href="/Events/ViewRequestedEvents">View Requested Events</a></li>
+                                    <li id="eventhitory" runat="server" class="divider"></li>
+                                    <li id="eventhitory2" runat="server"><a href="/Events/EventImportHistory">Import History</a></li>
+                                    <li class="divider"></li>
+                                    <li><a href="/Events/AddNewEvent">Add New Event</a></li>
+                                    <li><a href="/Events/ImportEvents">Import Events</a></li>
+                                </ul>
+
+                            </li>
+
+                            <li id="availableEventsTab" runat="server">
+                                <a id="availableEvents" href="/ambassadors/AvailableEvents">Available Events
+                                </a>
+                            </li>
+
+                            <li id="paymentsTab" runat="server">
+                                <a id="payments" href="/ambassadors/PaymentsNew">Payments
+                                </a>
+                            </li>
+
+                            <li id="classroomTab" runat="server">
+                                <a id="classrooms" href="/application/classrooms">Brand Training
+                                </a>
+                            </li>
+
+                            <li id="profiletab" runat="server">
+                                <a href="/application/profile">My Profile
+                                </a>
+                            </li>
+
+                            <li id="password" runat="server">
+                                <a href="/Account/ManagePassword">Change Password
+                                </a>
+                            </li>
+
+                            <li id="divider" class="divider" runat="server"></li>
+                            <li id="logout" runat="server">
+                                <a href="/account/logout">Logout
+                                </a>
+                            </li>
+
+
+                            <%--<li id="accounts" runat="server">
+                                <a href="/Accounts/ViewAccounts.aspx">Accounts</a>
+                            </li>--%>
+
+                            <li class="dropdown" id="accounts_dropdown" runat="server">
+
+                                <a href="javscript:;" class="dropdown-toggle" data-toggle="dropdown">Accounts
+                                    <b class="caret"></b>
+                                </a>
+
+                                <ul class="dropdown-menu">
+                                    <li id="accountsTab1" runat="server"><a href="/Accounts/ViewAccounts.aspx">View Accounts</a></li>
+                                    <li id="accountsTab2" runat="server"><a href="/Accounts/ViewBrandMarketerAccounts">View Brand Marketer Accounts</a></li>
+                                    <li id="accountsTab3" runat="server"><a href="/Accounts/ViewActivities">View Activities</a></li>
+                                    <li id="accountsdivider" runat="server" class="divider"></li>
+                                    <li id="accountsTab4" runat="server"><a href="/Accounts/AddAccount">Add New Account</a></li>
+                                </ul>
+
+                            </li>
+
+
+                            <li id="gallery" runat="server">
+                                <a href="/gallery/photogallery">
+                                    <span>Gallery</span>
+                                </a>
+                            </li>
+
+                            <li id="reports" runat="server">
+                                <a href="/Reports/Dashboard">
+                                    <span>Reports</span>
+                                </a>
+                            </li>
+
+                            <li id="pos" runat="server">
+                                <a href="/admin/viewPOS">
+                                    <span>POS/Logistics</span>
+                                </a>
+                            </li>
+
+                            <li class="dropdown" id="settings" runat="server">
+
+                                <a href="javscript:;" class="dropdown-toggle" data-toggle="dropdown">Settings
+                                    <b class="caret"></b>
+                                </a>
+
+                                <ul class="dropdown-menu">
+                                    <li>
+                                        <asp:HyperLink ID="SettingsLink1" runat="server"></asp:HyperLink></li>
+                                    <li>
+                                        <asp:HyperLink ID="SettingsLink2" runat="server"></asp:HyperLink></li>
+                                    <li>
+                                        <asp:HyperLink ID="SettingsLink3" runat="server"></asp:HyperLink></li>
+                                    <li>
+                                        <asp:HyperLink ID="SettingsLink4" runat="server"></asp:HyperLink></li>
+
+                                    <%--<li class="divider"></li>
+                                    <li><a href="/admin/siteadministration#_">Administration</a></li>--%>
+                                </ul>
+
+                            </li>
+
+
+                        </ul>
+
+                        <ul class="mainnav navbar-right mobileBar">
+
+                            <li class="dropdown" id="ambassadors1" runat="server">
+
+                                <a href="javscript:;" class="dropdown-toggle" data-toggle="dropdown">Brand Ambassadors
+                                    <b class="caret"></b>
+                                </a>
+
+                                <ul class="dropdown-menu">
+                                    <li><a href="/Ambassadors/ActiveList.aspx">Active BA's</a></li>
+                                    <li><a href="/ambassadors/pendinglist">Pending BA's</a></li>
+                                    <li><a href="/ambassadors/terminatedlist">Terminated BA's</a></li>
+                                    <li><a href="/ambassadors/rejectedlist">Rejected BA's</a></li>
+
+
+
+                                    <li class="divider"></li>
+                                    <li><a href="/ambassadors/AddAmbassador">Add New BA</a></li>
+                                </ul>
+
+                            </li>
+
+
+
+
+                            <%--<li id="settings" runat="server">
+                                <a href="/admin/siteadministration">
+                                    <span>Settings</span>
+                                </a>
+                            </li>--%>
+
+                             <li id="admin" runat="server" class="dropdown">
+
+                                <a href="javscript:;" class="dropdown-toggle" data-toggle="dropdown">Administration
+                                    <b class="caret"></b>
+                                </a>
+
+                                <ul class="dropdown-menu">
+                                    <li><a href="/GlobalAdmin/Clients/Default">Clients</a></li>
+                                    <li><a href="/admin/viewuserslist?ClientID=18">Users</a></li>
+                                    <%--<li><a href="/Events/ViewRequestedEvents">View Requested Events</a></li>
+                                    <li id="Li2" runat="server" class="divider"></li>
+                                    <li id="Li3" runat="server"><a href="/Events/EventImportHistory">Import History</a></li>
+                                    <li class="divider"></li>
+                                    <li><a href="/Events/AddNewEvent">Add New Event</a></li>
+                                    <li><a href="/Events/ImportEvents">Import Events</a></li>--%>
+                                </ul>
+
+                            </li>
+
+                            <%--<li >
+                                <a href="/GlobalAdmin/Clients/Default">
+                                    <span>Clients</span>
+                                </a>
+                            </li>--%>
+                        </ul>
+
+                    </div>
+                    <!-- /.subnav-collapse -->
+
+
+                </div>
+                <!-- /container -->
+
+            </div>
+            <!-- /subnavbar-inner -->
+
+
+
+        </div>
+        <!-- /subnavbar -->
+
+        <div class="main">
+
+
+            <asp:Label ID="Label1" runat="server" />
+
+
+            <asp:ContentPlaceHolder ID="MainContent" runat="server">
+            </asp:ContentPlaceHolder>
+
+            <div id="clientfooter" runat="server" class="container">
+                <div class="col-md-12 pull-right">
+
+                    <hr />
+                    <br />
+                    <asp:Image ID="FooterImage" runat="server" ImageUrl="/images/GigEngyn Logo.png" ImageAlign="right" AlternateText="GigEngyn" Width="175px" />
+
+
+
+                </div>
+            </div>
+
+        </div>
+
+        <div class="footersection">
+
+            <div class="container">
+
+                <div class="row">
+
+                    <div id="footer-copyright" class="col-md-6">
+                        <p style="padding-left: 5px;">
+                            Copyright &copy; 2022 GigEngyn
+                        </p>
+                    </div>
+                    <!-- /span6 -->
+
+                    <div id="footer-terms" class="col-md-6">
+                    </div>
+                    <!-- /.span6 -->
+
+                </div>
+                <!-- /row -->
+
+            </div>
+            <!-- /container -->
+
+        </div>
+        <!-- /footer -->
+
+        <!-- Le javascript
+================================================== -->
+        <!-- Placed at the end of the document so the pages load faster -->
+
+        <%--        <script src="http://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.1.0/js/bootstrap.min.js"></script>--%>
+    </form>
+</body>
+</html>

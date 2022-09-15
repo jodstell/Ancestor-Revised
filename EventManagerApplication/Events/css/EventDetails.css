@@ -1,0 +1,388 @@
+﻿
+    #genreContainer {
+    }
+
+        #genreContainer a,
+        .result .genre {
+            display: block;
+            padding: 18px 5px 17px 55px;
+            font-size: 14px;
+            text-decoration: none;
+        }
+
+
+/*Staffing requirements start-edn time boxes*/
+html body .RadInput .riTextBox, html body .RadInputMgr {
+    padding: 7px 4px 6px !important;
+}
+
+
+    * > #genreContainer a,
+    * > .result .genre {
+        background: #ECF4FF;
+    }
+
+    * html #genreContainer a,
+    * html .result .genre {
+        background: #ECF4FF;
+    }
+
+        #genreContainer a:hover,
+        #genreContainer a.selected {
+            background-color: #FFCB60;
+            color: #00156E;
+        }
+
+    #GenreLink a:hover,
+    #GenreLink a.selected {
+        background-color: #FFCB60;
+        color: #00156E;
+    }
+
+    #genreContainer a.Unsorted,
+    .result .Unsorted {
+        background-position: 10px -94px;
+    }
+
+
+    .fieldsetBox {
+        float: left;
+        width: 400px;
+        height: 180px;
+    }
+
+
+
+    .RadForm_BlackMetroTouch .fieldsetBox {
+        width: 400px;
+    }
+
+
+
+    .demoWrapper {
+        font-size: 12px;
+    }
+
+
+
+    .pagerWrapper {
+        padding-top: 10px;
+        text-align: left;
+    }
+
+
+
+    .demoPager {
+        float: left;
+        margin-left: 25%;
+    }
+
+
+
+    .numericPageSize {
+        vertical-align: middle;
+        margin-top: 3px;
+        line-height: 22px;
+        display: inline-block;
+    }
+
+
+
+    .pageSize {
+        vertical-align: middle;
+        line-height: 22px;
+        display: inline-block;
+        padding-left: 5px;
+    }
+
+
+
+    .itemTable {
+        width: 95%;
+        border-spacing: 0px;
+    }
+
+
+
+    .cellLabel {
+        width: 25%;
+    }
+
+
+
+    .cellInfo {
+        width: 75%;
+    }
+
+
+    .clear {
+        clear: both;
+    }
+
+
+
+
+
+
+
+    .filterWrapper {
+        overflow: hidden;
+    }
+
+
+
+    .filterDropDown {
+        color: #2a6ca3;
+        font-size: 11px;
+        /*width: 170px;*/
+        margin-bottom: 20px;
+    }
+
+
+
+    div.radioButtonDiv {
+        display: none;
+        float: left;
+        margin: -6px 10px 0 0;
+        color: #2a6ca3;
+        font-size: 11px;
+    }
+
+
+
+    div.boxValueDiv {
+        display: none;
+        float: left;
+        margin-right: 10px;
+        color: #2a6ca3;
+        font-size: 11px;
+    }
+
+
+
+    div.buttonsDiv {
+        display: none;
+        float: left;
+        margin-right: 10px;
+        color: #2a6ca3;
+        font-size: 11px;
+    }
+
+
+
+    .boxValue {
+        vertical-align: middle;
+    }
+
+
+
+    .clearFix {
+        clear: both;
+    }
+
+    .labelLarge {
+        position: absolute;
+        top: 20px;
+        left: 29px;
+        font-size: 10pt;
+        font-weight: bold;
+        width: 140px;
+    }
+
+
+
+    .labelSmall {
+        position: absolute;
+        top: 60px;
+        left: 50px;
+        font-size: 8pt;
+        margin-right: 8px;
+    }
+
+
+
+    legend {
+        padding: 0.2em 0.5em;
+        color: #2a6ca3;
+        font-size: 12px;
+    }
+
+
+
+    fieldset {
+        margin-top: 20px;
+        border: solid 1px #e2e4e7 !important;
+        height: 100%;
+        width: 780px;
+    }
+
+
+
+    .rdpWrap + .rdpWrap + .rdpWrap + .rdpWrap + .rdpWrap {
+        width: 140px;
+    }
+
+
+
+        .rdpWrap + .rdpWrap + .rdpWrap + .rdpWrap + .rdpWrap + .rdpWrap {
+            width: auto;
+        }
+
+
+        .table > thead > tr > th {
+            padding: 5px;
+            line-height: 1.42857143;
+            vertical-align: top;
+            border-top: 0 solid #ddd;
+        }
+
+        .pdfContainer {
+            width: 100%;
+            font-size: 12px;
+        }
+
+        .k-pdf-export.pdfContainer {
+            margin-left: 50px;
+            margin-right: 50px;
+            font-family: "arial,verdana";
+            font-size: 12px;
+            width: 90%;
+        }
+
+        .col-md-2, .col-xs-2 {
+            position: relative;
+            min-height: 1px;
+            padding-right: 0px;
+            padding-left: 5px;
+        }
+
+        .bin {
+            border: 2px solid;
+            padding: 2px;
+            color: white;
+            background-color: #428BCA;
+        }
+
+        .delete {
+             border: 2px solid;
+            padding: 2px;
+            color: white;
+            background-color: red;
+        }
+
+         .btnbox {
+            padding-top: 25px;
+            text-align: right;
+        }
+
+        .imageContainer {
+            float: left;
+            margin: 5px;
+            padding: 2px;
+            position: relative;
+            background: #eeeeee;
+        }
+
+            .imageContainer:hover {
+                background-color: #a1da29 !important;
+            }
+
+        .buttonsWrapper {
+            display: inline-block;
+            vertical-align: middle;
+        }
+
+       .image {
+        vertical-align: bottom;
+        text-align: right;
+        width: 25%;
+        cursor: pointer;
+        display: block;
+    }
+
+
+        .txt {
+            border: 0 !important;
+            background: #eeeeee !important;
+            color: Black !important;
+            margin-left: 25%;
+            margin-right: auto;
+            width: 100%;
+            filter: alpha(opacity=50); /* IE's opacity*/
+            opacity: 0.50;
+            text-align: center;
+        }
+
+          #list {
+            max-width: 900px;
+        }
+
+
+           .demo-container {
+        max-width: 920px;
+    }
+
+
+
+        .sliderWrapper {
+            float: left;
+            display: inline-block;
+            margin-bottom: 15px;
+        }
+
+         .showDiv {
+            display: none;
+        }
+
+
+          .dirSDK .directionsPanel {
+            width: 100%;
+        }
+
+        #ctl00_MainContent_ctl00_MainContent_btnUpdateStatusPanel {
+            display: inline !important;
+        }
+
+        @media (min-width: 320px) and (max-width: 1024px) {
+
+            .main {
+                padding: 10px !important;
+            }
+        }
+
+        .overflow {
+            height: 675px;
+            overflow: auto;
+        }
+
+
+
+        .DropZone1 {
+            width: 100%;
+            height: 90px;
+            background-color: #357A2B;
+            border-color: #CCCCCC;
+            float: left;
+            text-align: center;
+            font-size: 24px;
+            color: white;
+            margin-bottom: 25px;
+        }
+
+        .demo-container .RadAsyncUpload {
+            margin-left: 250px;
+            margin-bottom: 28px;
+        }
+
+        .demo-container .RadUpload .ruUploadProgress {
+            width: 230px;
+            display: inline-block;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .demo-container .ruFakeInput {
+            width: 200px;
+        }
+
+

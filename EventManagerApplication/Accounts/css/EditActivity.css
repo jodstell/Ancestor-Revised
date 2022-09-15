@@ -1,0 +1,31 @@
+﻿ .widget .widget-content {
+            padding-top: 5px;
+        }
+
+        .nav-tabs, .nav-pills {
+            margin-bottom: 1px;
+        }
+
+        .table th, .table td {
+            border-top: none !important;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        .form-group-sm {
+            margin-bottom: 10px;
+        }
+
+        .combobox {
+            width: 300px;
+        }
+
+
+        .RadListView div.rlvI, .RadListView div.rlvA {
+            border-bottom: 1px solid;
+            padding-top: 5px;
+            padding-bottom: 8px;
+            padding-left: 5px;
+        }

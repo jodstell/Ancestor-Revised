@@ -1,0 +1,246 @@
+/*------------------------------------------------------------------
+
+[Custom Stylesheet]
+
+
+Last change:	03/25/2013
+Assigned to:	You
+
+-------------------------------------------------------------------*/
+
+
+
+
+
+.RadMap .k-marker-approved:before {
+    color: #52b7e9;
+}
+.RadMap .k-marker-scheduled:before {
+    color: #fe9a00;
+}
+.RadMap .k-marker-toplined:before {
+    color: #790091;
+}
+.RadMap .k-marker-booked:before {
+    color: #669934;
+}
+.RadMap .k-marker-requested:before {
+    color: #005991;
+}
+.RadMap .k-marker-cancelled:before {
+    color: #c9302b;
+}
+
+    .RadMap .k-marker.k-marker-venue:before {
+    color: #fe9a00;
+    font-size:15px;
+}
+
+.RadMap .k-marker.k-marker-approved:before {
+    content: none;
+    font-size: 0;
+    margin: 0;
+    padding: 0;
+    height: 0;
+    width: 0;
+}
+
+.RadMap .k-marker.k-marker-approved {
+    background-image:url('../../images/light_blue.png');
+     background-repeat:no-repeat;
+     background-position: 0 0;  
+}
+
+.RadMap .k-marker.k-marker-scheduled:before {
+    content: none;
+    font-size: 0;
+    margin: 0;
+    padding: 0;
+    height: 0;
+    width: 0;
+}
+
+.RadMap .k-marker.k-marker-scheduled {
+    background-image:url('../../images/orange.png');
+     background-repeat:no-repeat;
+     background-position: 0 0; 
+}
+
+.RadMap .k-marker.k-marker-toplined:before {
+    content: none;
+    font-size: 0;
+    margin: 0;
+    padding: 0;
+    height: 0;
+    width: 0;
+}
+
+.RadMap .k-marker.k-marker-toplined{
+        background-image:url('../../images/purple.png');
+     background-repeat:no-repeat;
+     background-position: 0 0; 
+}
+
+.RadMap .k-marker.k-marker-booked:before {
+    content: none;
+    font-size: 0;
+    margin: 0;
+    padding: 0;
+    height: 0;
+    width: 0;
+}
+.RadMap .k-marker.k-marker-booked {
+     background-image:url('../../images/green.png');
+     background-repeat:no-repeat;
+     background-position: 0 0;   
+}
+
+.RadMap .k-marker.k-marker-requested:before {
+    content: none;
+    font-size: 0;
+    margin: 0;
+    padding: 0;
+    height: 0;
+    width: 0;
+}
+.RadMap .k-marker.k-marker-requested{
+         background-image:url('../../images/purple.png');
+     background-repeat:no-repeat;
+     background-position: 0 0;
+}
+.RadMap .k-marker.k-marker-cancelled:before {
+    content: none;
+    font-size: 0;
+    margin: 0;
+    padding: 0;
+    height: 0;
+    width: 0;
+}
+
+.RadMap .k-marker.k-marker-cancelled{
+             background-image:url('../../images/red.png');
+     background-repeat:no-repeat;
+     background-position: 0 0;
+}
+
+ .RadMap .k-marker-hostel:before {
+
+    color: wheat;
+
+}
+
+ .RadMap .k-marker-vip:before {
+
+    color: black;
+
+}
+
+.smbox{
+  padding: 0px 25px 0px 20px;
+  /*margin: -3px -4px 0px -15px;*/
+}
+
+
+.greenbox{
+   background: #669934;
+   color: white;
+}
+/*
+.greenbox:hover{
+   
+    background: #78b33e;
+}
+
+.greenbox:active,
+.greenbox:focus{
+   
+    background: #78b33e;
+
+}
+*/
+
+.darkbluebox{
+    color: white;
+    background: #005991;
+}
+/*
+.darkbluebox:hover{
+   
+    background: #036caf;
+}
+
+.darkbluebox:active,
+.darkbluebox:focus{
+   
+    background: #036caf;
+}
+*/
+
+.orangebox{ 
+    color: white;
+    background: #fe9a00;
+}
+/*
+.orangebox:hover{
+   
+    background: #fead31;
+}
+
+.orangebox:active,
+.orangebox:focus{
+   
+    background: #fead31;
+}
+*/
+
+.redbox{
+    color: white;
+    background: #c9302b;
+}
+/*
+.redbox:hover{
+    
+    background: #d1423d;
+}
+
+.redbox:active,
+.redbox:focus{
+   
+    background: #d1423d;
+}
+*/
+
+.bluebox{
+    color: white;
+    background: #3398cc;
+}
+/*
+.bluebox:hover{
+    
+    background: #52b7e9;
+}
+
+.bluebox:active,
+.bluebox:focus{
+   
+    background: #52b7e9;
+}
+*/
+.purplebox{
+    color: white;
+    background: #790091;
+}
+
+/*
+.purplebox:hover{
+    
+    background: #aa39c1;
+}
+
+
+.purplebox:active,
+.purplebox:focus{
+   
+    background: #aa39c1;
+}
+*/

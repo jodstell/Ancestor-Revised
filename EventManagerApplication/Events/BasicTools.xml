@@ -1,0 +1,29 @@
+﻿<root>
+
+  <tools name="Formatting" enabled="true" dockable="true">
+    <tool name="Bold" />
+    <tool name="Italic" />
+    <tool name="Underline" />
+
+    <tool separator="true"/>
+
+    <tool name="ForeColor" />
+    <tool name="InsertUnorderedList" />
+    <tool name="InsertOrderedList" />
+<tool name="InsertHorizontalRule" />
+
+    <tool separator="true"/>
+
+    <tool name="RealFontSize"/>
+    <tool name="FormatBlock" />
+    <tool name="PasteStrip" />
+    <tool name="FormatStripper" />
+    <tool name="InsertLink" />
+
+  <tool separator="true"/>
+        <tool name="Undo" />
+        <tool name="Redo" />
+
+  </tools>
+
+</root>
